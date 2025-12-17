@@ -1,1067 +1,1225 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onufranka SMM Agency | Premium Social Media Marketing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --bg-color: #0F0F0F;
-            --card-bg: #141414;
-            --text-main: #FFFFFF;
-            --text-muted: #A0A0A0;
-            --brand-red: #D61A2A; 
-            --border-color: #333333;
-            --font-main: 'Montserrat', sans-serif;
-            --header-height: 100px;
-            --transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
+      :root {
+        --bg-color: #0f0f0f;
+        --card-bg: #141414;
+        --text-main: #ffffff;
+        --text-muted: #a0a0a0;
+        --brand-red: #d61a2a;
+        --border-color: #333333;
+        --font-main: 'Montserrat', sans-serif;
+        --header-height: 100px;
+        --transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+      body {
+        font-family: var(--font-main);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-        h1, h2, h3, h4 {
-            font-weight: 800;
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 800;
+        line-height: 1.1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
 
-        h2 {
-            font-size: 3rem;
-            margin-bottom: 50px;
-            display: inline-block;
-            border-bottom: 4px solid var(--brand-red);
-            padding-bottom: 10px;
-        }
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        display: inline-block;
+        border-bottom: 4px solid var(--brand-red);
+        padding-bottom: 10px;
+      }
 
-        p {
-            color: var(--text-muted);
-            font-weight: 300;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
+      p {
+        color: var(--text-muted);
+        font-weight: 300;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-        .container {
-            width: 88%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+      .container {
+        width: 88%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
-        .section-padding {
-            padding: 120px 0;
-        }
+      .section-padding {
+        padding: 120px 0;
+      }
 
-        /* --- Buttons --- */
-        .btn {
-            position: relative;
-            display: inline-block;
-            padding: 18px 50px;
-            background: transparent;
-            color: var(--text-main);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 1px solid var(--text-main);
-            overflow: hidden;
-            z-index: 1;
-            cursor: pointer;
-        }
+      /* --- Buttons --- */
+      .btn {
+        position: relative;
+        display: inline-block;
+        padding: 18px 50px;
+        background: transparent;
+        color: var(--text-main);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: 1px solid var(--text-main);
+        overflow: hidden;
+        z-index: 1;
+        cursor: pointer;
+      }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: var(--brand-red);
-            z-index: -1;
-            transition: var(--transition);
-        }
+      .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--brand-red);
+        z-index: -1;
+        transition: var(--transition);
+      }
 
-        .btn:hover::before {
-            width: 100%;
-        }
+      .btn:hover::before {
+        width: 100%;
+      }
 
-        .btn:hover {
-            border-color: var(--brand-red);
-        }
+      .btn:hover {
+        border-color: var(--brand-red);
+      }
 
-        /* --- Header --- */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--header-height);
-            background-color: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-            transition: transform 0.3s ease-in-out;
-        }
+      /* --- Header --- */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-height);
+        background-color: rgba(15, 15, 15, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+      }
 
-        @media (max-width: 992px) {
-            .header.scroll-down { transform: translateY(-100%); }
-            .header.scroll-up { transform: translateY(0); }
+      @media (max-width: 992px) {
+        .header.scroll-down {
+          transform: translateY(-100%);
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .header.scroll-up {
+          transform: translateY(0);
         }
+      }
 
-        .logo img {
-            height: 60px;
-        }
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .nav-links {
-            display: flex;
-            gap: 40px;
-        }
+      .logo img {
+        height: 60px;
+      }
 
-        .nav-links a {
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: var(--text-main);
-            opacity: 0.7;
-        }
+      .nav-links {
+        display: flex;
+        gap: 40px;
+      }
 
-        .nav-links a:hover {
-            opacity: 1;
-            color: var(--brand-red);
-        }
+      .nav-links a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--text-main);
+        opacity: 0.7;
+      }
 
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 6px;
-        }
+      .nav-links a:hover {
+        opacity: 1;
+        color: var(--brand-red);
+      }
 
-        .hamburger span {
-            width: 35px;
-            height: 2px;
-            background-color: var(--text-main);
-            transition: var(--transition);
-        }
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 6px;
+      }
 
-        /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 700px;
-            display: flex;
-            align-items: center;
-            padding-top: var(--header-height);
-            overflow: hidden;
-        }
+      .hamburger span {
+        width: 35px;
+        height: 2px;
+        background-color: var(--text-main);
+        transition: var(--transition);
+      }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40%;
-            height: 100%;
-            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-            z-index: -1;
-        }
+      /* --- Hero Section --- */
+      .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        padding-top: var(--header-height);
+        overflow: hidden;
+      }
 
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+        z-index: -1;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 4.5rem;
+        margin-bottom: 30px;
+        line-height: 1;
+      }
+
+      .hero-text .outlined {
+        color: var(--brand-red);
+        display: block;
+      }
+
+      .hero-tagline {
+        border-left: 2px solid var(--brand-red);
+        padding-left: 20px;
+        margin-bottom: 40px;
+        max-width: 500px;
+      }
+
+      .hero-image-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-image-container img {
+        filter: grayscale(100%) contrast(1.2);
+        transition: filter 0.5s ease;
+        box-shadow: -20px 20px 0px rgba(214, 26, 42, 0.2);
+      }
+
+      .hero-image-container:hover img {
+        filter: grayscale(0%) contrast(1);
+      }
+
+      /* --- About Section (Updated) --- */
+      .about {
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .about-content {
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .about-text {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        margin-bottom: 60px;
+        color: #dcdcdc;
+      }
+
+      .about-text strong {
+        color: var(--brand-red);
+      }
+
+      /* CLEANER GRID - No Borders, SVG Icons */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px; /* Spacious gap instead of border lines */
+        margin-top: 40px;
+      }
+
+      .feature-box {
+        background-color: var(--card-bg); /* Distinct background */
+        padding: 40px 20px;
+        text-align: center;
+        transition: var(--transition);
+        border-radius: 4px;
+        border: 1px solid transparent; /* Invisible border for hover state */
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+        border-color: #333;
+        background-color: #1a1a1a;
+      }
+
+      .feature-icon {
+        height: 50px;
+        width: 50px;
+        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .feature-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--brand-red); /* Monotone Red */
+        transition: transform 0.3s ease;
+      }
+
+      .feature-box:hover .feature-icon svg {
+        transform: scale(1.1);
+      }
+
+      .feature-box p {
+        margin: 0;
+        color: var(--text-main);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* --- Services --- */
+      .services {
+        background-color: #0f0f0f;
+      }
+
+      .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--border-color);
+        border-left: 1px solid var(--border-color);
+      }
+
+      .service-item {
+        flex: 1 1 300px;
+        min-width: 300px;
+        padding: 50px;
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        transition: var(--transition);
+        position: relative;
+        background-color: var(--bg-color);
+      }
+
+      .service-item:hover {
+        background-color: var(--brand-red);
+        transform: scale(1.02);
+        z-index: 2;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        border-color: var(--brand-red);
+      }
+
+      .service-item:hover h3,
+      .service-item:hover p,
+      .service-item:hover .s-icon {
+        color: white;
+      }
+
+      .s-icon {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        color: var(--text-muted);
+        transition: var(--transition);
+      }
+
+      .service-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+
+      /* --- Steps --- */
+      .steps {
+        background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+      }
+
+      .steps-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .step-row {
+        display: flex;
+        gap: 30px;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border-color);
+        align-items: flex-start;
+      }
+
+      .step-row:last-child {
+        border-bottom: none;
+      }
+
+      .step-index {
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--brand-red);
+        line-height: 0.8;
+        min-width: 80px;
+      }
+
+      .step-details h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      /* --- Cases --- */
+      .cases {
+        background-color: var(--bg-color);
+      }
+
+      .cases-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+      }
+
+      .case-card {
+        flex: 1 1 350px;
+        max-width: 500px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+      }
+
+      .case-card:hover {
+        border-color: var(--brand-red);
+        transform: translateY(-5px);
+      }
+
+      .case-img-placeholder {
+        height: 250px;
+        display: flex;
+        position: relative;
+      }
+
+      .c-before,
+      .c-after {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.2rem;
+        position: relative;
+      }
+
+      .c-before {
+        background-color: #222;
+        color: #555;
+      }
+      .c-after {
+        background-color: var(--brand-red);
+        color: white;
+      }
+
+      .c-before::after {
+        content: 'ДО';
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 0.7rem;
+        opacity: 0.7;
+      }
+      .c-after::after {
+        content: 'ПІСЛЯ';
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.7rem;
+        opacity: 0.7;
+      }
+
+      .case-meta {
+        padding: 30px;
+      }
+
+      .case-meta h4 {
+        color: var(--brand-red);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .case-meta p {
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      /* --- Training --- */
+      .training {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url('https://i.imgur.com/i7praRh.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        text-align: center;
+        border-top: 4px solid var(--brand-red);
+        border-bottom: 4px solid var(--brand-red);
+      }
+
+      .training h2 {
+        border: none;
+        font-size: 3.5rem;
+        color: white;
+      }
+
+      /* --- Footer (Updated) --- */
+      .footer {
+        background-color: #050505;
+        padding: 80px 0 40px;
+        border-top: 1px solid #222;
+      }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        margin-bottom: 60px;
+      }
+
+      .footer-brand img {
+        height: 50px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+      }
+
+      .footer-col h4 {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        color: white;
+      }
+
+      .footer-list li {
+        margin-bottom: 15px;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-list a:hover {
+        color: var(--brand-red);
+      }
+
+      /* Improved Social Links */
+      .social-link-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        color: white;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .social-link-row:hover {
+        color: var(--brand-red);
+      }
+
+      .social-link-row:hover .social-icon-circle {
+        background-color: var(--brand-red);
+        color: white;
+      }
+
+      .social-icon-circle {
+        width: 40px;
+        height: 40px;
+        background-color: #1a1a1a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      .social-icon-circle svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .social-text {
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .social-label {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 2px;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #222;
+        font-size: 0.8rem;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* --- Animation Classes --- */
+      .reveal-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 0.8s ease-out;
+      }
+
+      .reveal-up.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* --- Media Queries --- */
+      @media (max-width: 992px) {
         .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .hero-text h1 {
-            font-size: 4.5rem;
-            margin-bottom: 30px;
-            line-height: 1;
-        }
-
-        .hero-text .outlined {
-            color: var(--brand-red);
-            display: block;
+          grid-template-columns: 1fr;
+          text-align: center;
         }
 
         .hero-tagline {
-            border-left: 2px solid var(--brand-red);
-            padding-left: 20px;
-            margin-bottom: 40px;
-            max-width: 500px;
+          margin: 0 auto 40px auto;
+          border-left: none;
+          border-bottom: 2px solid var(--brand-red);
+          padding-bottom: 15px;
+          padding-left: 0;
         }
 
-        .hero-image-container {
-            position: relative;
-            z-index: 1;
+        .hero-text h1 {
+          font-size: 3rem;
         }
 
-        .hero-image-container img {
-            filter: grayscale(100%) contrast(1.2);
-            transition: filter 0.5s ease;
-            box-shadow: -20px 20px 0px rgba(214, 26, 42, 0.2);
+        .hero::before {
+          width: 100%;
+          height: 40%;
+          top: auto;
+          bottom: 0;
+          opacity: 0.5;
         }
 
-        .hero-image-container:hover img {
-            filter: grayscale(0%) contrast(1);
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          height: 100vh;
+          background-color: #0f0f0f;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: 0.4s ease;
+          z-index: 999;
         }
 
-        /* --- About Section (Updated) --- */
-        .about {
-            border-bottom: 1px solid var(--border-color);
+        .nav-links.active {
+          right: 0;
         }
 
-        .about-content {
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
+        .nav-links a {
+          font-size: 1.5rem;
         }
 
-        .about-text {
-            font-size: 1.25rem;
-            line-height: 1.8;
-            margin-bottom: 60px;
-            color: #dcdcdc;
+        .hamburger {
+          display: flex;
+          z-index: 1001;
         }
 
-        .about-text strong {
-            color: var(--brand-red);
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -6px);
         }
 
-        /* CLEANER GRID - No Borders, SVG Icons */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; /* Spacious gap instead of border lines */
-            margin-top: 40px;
+        h2 {
+          font-size: 2.2rem;
         }
-
-        .feature-box {
-            background-color: var(--card-bg); /* Distinct background */
-            padding: 40px 20px;
-            text-align: center;
-            transition: var(--transition);
-            border-radius: 4px;
-            border: 1px solid transparent; /* Invisible border for hover state */
-        }
-
-        .feature-box:hover {
-            transform: translateY(-5px);
-            border-color: #333;
-            background-color: #1a1a1a;
-        }
-
-        .feature-icon {
-            height: 50px;
-            width: 50px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .feature-icon svg {
-            width: 100%;
-            height: 100%;
-            fill: var(--brand-red); /* Monotone Red */
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-box:hover .feature-icon svg {
-            transform: scale(1.1);
-        }
-
-        .feature-box p {
-            margin: 0;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- Services --- */
-        .services {
-            background-color: #0F0F0F;
-        }
-
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            border-top: 1px solid var(--border-color);
-            border-left: 1px solid var(--border-color);
-        }
-
-        .service-item {
-            flex: 1 1 300px;
-            min-width: 300px;
-            padding: 50px;
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            transition: var(--transition);
-            position: relative;
-            background-color: var(--bg-color);
-        }
-
-        .service-item:hover {
-            background-color: var(--brand-red);
-            transform: scale(1.02);
-            z-index: 2;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            border-color: var(--brand-red);
-        }
-
-        .service-item:hover h3, 
-        .service-item:hover p, 
-        .service-item:hover .s-icon {
-            color: white;
-        }
-
-        .s-icon {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .service-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-
-        /* --- Steps --- */
-        .steps {
-            background: linear-gradient(180deg, #0F0F0F 0%, #1a1a1a 100%);
-        }
-
-        .steps-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .step-row {
-            display: flex;
-            gap: 30px;
-            padding: 40px 0;
-            border-bottom: 1px solid var(--border-color);
-            align-items: flex-start;
-        }
-
-        .step-row:last-child {
-            border-bottom: none;
-        }
-
-        .step-index {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--brand-red);
-            line-height: 0.8;
-            min-width: 80px;
-        }
-
-        .step-details h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* --- Cases --- */
-        .cases {
-            background-color: var(--bg-color);
-        }
-
-        .cases-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: center;
-        }
-
-        .case-card {
-            flex: 1 1 350px;
-            max-width: 500px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .case-card:hover {
-            border-color: var(--brand-red);
-            transform: translateY(-5px);
-        }
-
-        .case-img-placeholder {
-            height: 250px;
-            display: flex;
-            position: relative;
-        }
-
-        .c-before, .c-after {
-            width: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.2rem;
-            position: relative;
-        }
-
-        .c-before { background-color: #222; color: #555; }
-        .c-after { background-color: var(--brand-red); color: white; }
-        
-        .c-before::after { content: 'ДО'; position: absolute; bottom: 10px; left: 10px; font-size: 0.7rem; opacity: 0.7;}
-        .c-after::after { content: 'ПІСЛЯ'; position: absolute; bottom: 10px; right: 10px; font-size: 0.7rem; opacity: 0.7;}
-
-        .case-meta {
-            padding: 30px;
-        }
-
-        .case-meta h4 {
-            color: var(--brand-red);
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-        
-        .case-meta p {
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        /* --- Training --- */
-        .training {
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://cdn.discordapp.com/attachments/1365890426854309972/1449316942749110343/owner_2.jpg?ex=693e7516&is=693d2396&hm=b0c0e208873555b3909537420010be3fe92ba07edde341aed31d308b85e2d0f8&');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-            border-top: 4px solid var(--brand-red);
-            border-bottom: 4px solid var(--brand-red);
-        }
-
-        .training h2 {
-            border: none;
-            font-size: 3.5rem;
-            color: white;
-        }
-
-        /* --- Footer (Updated) --- */
-        .footer {
-            background-color: #050505;
-            padding: 80px 0 40px;
-            border-top: 1px solid #222;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 50px;
-            margin-bottom: 60px;
-        }
-
-        .footer-brand img {
-            height: 50px;
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-
-        .footer-col h4 {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: white;
-        }
-
-        .footer-list li {
-            margin-bottom: 15px;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .footer-list a:hover {
-            color: var(--brand-red);
-        }
-
-        /* Improved Social Links */
-        .social-link-row {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .social-link-row:hover {
-            color: var(--brand-red);
-        }
-
-        .social-link-row:hover .social-icon-circle {
-            background-color: var(--brand-red);
-            color: white;
-        }
-
-        .social-icon-circle {
-            width: 40px;
-            height: 40px;
-            background-color: #1a1a1a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            color: #fff;
-            flex-shrink: 0;
-        }
-        
-        .social-icon-circle svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-        
-        .social-text {
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        
-        .social-label {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #222;
-            font-size: 0.8rem;
-            color: #555;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- Animation Classes --- */
-        .reveal-up {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: 0.8s ease-out;
-        }
-
-        .reveal-up.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- Media Queries --- */
-        @media (max-width: 992px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-tagline {
-                margin: 0 auto 40px auto;
-                border-left: none;
-                border-bottom: 2px solid var(--brand-red);
-                padding-bottom: 15px;
-                padding-left: 0;
-            }
-
-            .hero-text h1 {
-                font-size: 3rem;
-            }
-
-            .hero::before {
-                width: 100%;
-                height: 40%;
-                top: auto;
-                bottom: 0;
-                opacity: 0.5;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 100%;
-                height: 100vh;
-                background-color: #0F0F0F;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: 0.4s ease;
-                z-index: 999;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.5rem;
-            }
-
-            .hamburger {
-                display: flex;
-                z-index: 1001;
-            }
-
-            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
-            .hamburger.active span:nth-child(2) { opacity: 0; }
-            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="header" id="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="https://cdn.discordapp.com/attachments/1365890426854309972/1449314355828228148/logo_white.PNG?ex=693e72ad&is=693d212d&hm=6cce9daccda97000a87754c489a55bfb38c1f4df79287ad6b28ea86315d03e18&" alt="Onufranka SMM Agency">
-            </a>
-            <nav>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#about">Про агенцію</a></li>
-                    <li><a href="#services">Послуги</a></li>
-                    <li><a href="#steps">Процес</a></li>
-                    <li><a href="#cases">Портфоліо</a></li>
-                    <li><a href="#training">Навчання</a></li>
-                    <li><a href="#contact">Зв'язок</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <img
+            src="https://i.imgur.com/4MS4LPV.png"
+            alt="Onufranka SMM Agency"
+          />
+        </a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#about">Про агенцію</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#steps">Процес</a></li>
+            <li><a href="#cases">Портфоліо</a></li>
+            <li><a href="#training">Навчання</a></li>
+            <li><a href="#contact">Зв'язок</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
     </header>
 
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text reveal-up">
-                <p style="color: var(--brand-red); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">UKRAINE / WORLDWIDE</p>
-                <h1>ONUFRANKA <span class="outlined">SMM AGENCY</span></h1>
-                <div class="hero-tagline">
-                    <p style="color: white; margin: 0;">Ваш зовнішній відділ маркетингу. Ми будуємо системи комунікації, а не просто красиві картинки.</p>
-                </div>
-                <a href="#contact" class="btn">Консультація Безкоштовна</a>
-            </div>
-            <div class="hero-image-container reveal-up">
-                <img src="https://cdn.discordapp.com/attachments/1365890426854309972/1449316942749110343/owner_2.jpg?ex=693e7516&is=693d2396&hm=b0c0e208873555b3909537420010be3fe92ba07edde341aed31d308b85e2d0f8&" alt="Анастасія Онуфран">
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-text reveal-up">
+          <p
+            style="
+              color: var(--brand-red);
+              font-weight: 700;
+              letter-spacing: 2px;
+              margin-bottom: 10px;
+            "
+          >
+            UKRAINE / WORLDWIDE
+          </p>
+          <h1>ONUFRANKA <span class="outlined">SMM AGENCY</span></h1>
+          <div class="hero-tagline">
+            <p style="color: white; margin: 0">
+              Ваш зовнішній відділ маркетингу. Ми будуємо системи комунікації, а
+              не просто красиві картинки.
+            </p>
+          </div>
+          <a href="#contact" class="btn">Консультація Безкоштовна</a>
         </div>
+        <div class="hero-image-container reveal-up">
+          <img src="https://i.imgur.com/P852KCz.jpeg" alt="Анастасія Онуфран" />
+        </div>
+      </div>
     </section>
 
     <section id="about" class="about section-padding">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="reveal-up">Філософія Бренду</h2>
-                <div class="about-text reveal-up">
-                    <p>Onufranka SMM Agency — це <strong>стратегічний партнер</strong> для вашого бізнесу. Ми працюємо офіційно (ФОП) та забезпечуємо повну прозорість процесів. Ми відмовилися від шаблонів на користь глибокої аналітики та індивідуального підходу. Наша мета — перетворити витрати на SMM у стабільну інвестицію з високим ROI.</p>
-                </div>
+      <div class="container">
+        <div class="about-content">
+          <h2 class="reveal-up">Філософія Бренду</h2>
+          <div class="about-text reveal-up">
+            <p>
+              Onufranka SMM Agency — це
+              <strong>стратегічний партнер</strong> для вашого бізнесу. Ми
+              працюємо офіційно (ФОП) та забезпечуємо повну прозорість процесів.
+              Ми відмовилися від шаблонів на користь глибокої аналітики та
+              індивідуального підходу. Наша мета — перетворити витрати на SMM у
+              стабільну інвестицію з високим ROI.
+            </p>
+          </div>
 
-                <div class="features-grid reveal-up">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                        </div>
-                        <p>Офіційно (ФОП)</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                             <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <p>Команда Експертів</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2h2v5h5v2h-5v5h-2v-5H7v-2h5V5z" fill="none" d="M0 0h24v24H0V0z"/><path d="M12 2L2 12l10 10 10-10L12 2zm0 4l3 3-3 3-3-3 3-3z"/></svg>
-                        </div>
-                        <p>Індивідуальні Стратегії</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                        </div>
-                        <p>Worldwide</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                             <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-                        </div>
-                        <p>Прозорість</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                             <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                        </div>
-                        <p>Фокус на ROI</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                             <svg viewBox="0 0 24 24"><path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/></svg>
-                        </div>
-                        <p>Тренди</p>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                             <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-                        </div>
-                        <p>Швидкий Старт</p>
-                    </div>
-                </div>
+          <div class="features-grid reveal-up">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+                  />
+                </svg>
+              </div>
+              <p>Офіційно (ФОП)</p>
             </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                  />
+                </svg>
+              </div>
+              <p>Команда Експертів</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2h2v5h5v2h-5v5h-2v-5H7v-2h5V5z"
+                    fill="none"
+                    d="M0 0h24v24H0V0z"
+                  />
+                  <path d="M12 2L2 12l10 10 10-10L12 2zm0 4l3 3-3 3-3-3 3-3z" />
+                </svg>
+              </div>
+              <p>Індивідуальні Стратегії</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+              </div>
+              <p>Worldwide</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"
+                  />
+                </svg>
+              </div>
+              <p>Прозорість</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                  />
+                </svg>
+              </div>
+              <p>Фокус на ROI</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"
+                  />
+                </svg>
+              </div>
+              <p>Тренди</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+                </svg>
+              </div>
+              <p>Швидкий Старт</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="services" class="services section-padding">
-        <div class="container">
-            <h2 class="reveal-up" style="color: white;">Наші Послуги</h2>
-            <div class="services-container reveal-up">
-                <div class="service-item">
-                    <div class="s-icon">01</div>
-                    <h3>Стратегія та План</h3>
-                    <p>Розробка детального контент-плану та комплексної стратегії просування під бізнес-цілі.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">02</div>
-                    <h3>Візуал та Дизайн</h3>
-                    <p>Створення унікального стилю бренду. Професійна підготовка макетів для сторіс та стрічки.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">03</div>
-                    <h3>Копірайтинг</h3>
-                    <p>Тексти, що продають. Розробка Tone of Voice, який резонує з вашою аудиторією.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">04</div>
-                    <h3>Фото та Відео</h3>
-                    <p>Організація зйомок. Створення високоякісного контенту в будь-якому місті.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">05</div>
-                    <h3>Комплексне Ведення</h3>
-                    <p>Повне адміністрування акаунтів, модерація та управління репутацією.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">06</div>
-                    <h3>Таргет</h3>
-                    <p>Налаштування рекламних кампаній для максимального охоплення цільової аудиторії.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">07</div>
-                    <h3>Influencer Marketing</h3>
-                    <p>Організація колаборацій з блогерами, проведення конкурсів та промоакцій.</p>
-                </div>
-                <div class="service-item">
-                    <div class="s-icon">08</div>
-                    <h3>Web-Розробка</h3>
-                    <p>Створення сайтів та лендингів для закриття повного циклу продажів.</p>
-                </div>
-                 <div class="service-item">
-                    <div class="s-icon">09</div>
-                    <h3>Інфопродукти</h3>
-                    <p>Маркетинговий супровід запусків. Від ідеї до Sold Out.</p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="reveal-up" style="color: white">Наші Послуги</h2>
+        <div class="services-container reveal-up">
+          <div class="service-item">
+            <div class="s-icon">01</div>
+            <h3>Стратегія та План</h3>
+            <p>
+              Розробка детального контент-плану та комплексної стратегії
+              просування під бізнес-цілі.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">02</div>
+            <h3>Візуал та Дизайн</h3>
+            <p>
+              Створення унікального стилю бренду. Професійна підготовка макетів
+              для сторіс та стрічки.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">03</div>
+            <h3>Копірайтинг</h3>
+            <p>
+              Тексти, що продають. Розробка Tone of Voice, який резонує з вашою
+              аудиторією.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">04</div>
+            <h3>Фото та Відео</h3>
+            <p>
+              Організація зйомок. Створення високоякісного контенту в будь-якому
+              місті.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">05</div>
+            <h3>Комплексне Ведення</h3>
+            <p>
+              Повне адміністрування акаунтів, модерація та управління
+              репутацією.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">06</div>
+            <h3>Таргет</h3>
+            <p>
+              Налаштування рекламних кампаній для максимального охоплення
+              цільової аудиторії.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">07</div>
+            <h3>Influencer Marketing</h3>
+            <p>
+              Організація колаборацій з блогерами, проведення конкурсів та
+              промоакцій.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">08</div>
+            <h3>Web-Розробка</h3>
+            <p>
+              Створення сайтів та лендингів для закриття повного циклу продажів.
+            </p>
+          </div>
+          <div class="service-item">
+            <div class="s-icon">09</div>
+            <h3>Інфопродукти</h3>
+            <p>Маркетинговий супровід запусків. Від ідеї до Sold Out.</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="steps" class="steps section-padding">
-        <div class="container">
-            <h2 class="reveal-up" style="color:white; text-align: left;">Алгоритм Роботи</h2>
-            <div class="steps-wrapper">
-                
-                <div class="step-row reveal-up">
-                    <div class="step-index">01</div>
-                    <div class="step-details">
-                        <h3>Знайомство & Аналіз</h3>
-                        <p>Глибоке занурення в продукт. Визначаємо цілі, стиль комунікації та ДНК бренду.</p>
-                    </div>
-                </div>
-
-                <div class="step-row reveal-up">
-                    <div class="step-index">02</div>
-                    <div class="step-details">
-                        <h3>Аналітика Ніші</h3>
-                        <p>Дослідження конкурентів та ЦА. Пошук точок зростання та бар'єрів сприйняття.</p>
-                    </div>
-                </div>
-
-                <div class="step-row reveal-up">
-                    <div class="step-index">03</div>
-                    <div class="step-details">
-                        <h3>Стратегія</h3>
-                        <p>Фундамент бренду: Tone of Voice, візуальна система, рубрикатор. Чітка логіка дій.</p>
-                    </div>
-                </div>
-
-                <div class="step-row reveal-up">
-                    <div class="step-index">04</div>
-                    <div class="step-details">
-                        <h3>Production</h3>
-                        <p>Створення контенту: зйомка, монтаж, копірайтинг. Кожна одиниця контенту має мету.</p>
-                    </div>
-                </div>
-
-                <div class="step-row reveal-up">
-                    <div class="step-index">05</div>
-                    <div class="step-details">
-                        <h3>Реалізація</h3>
-                        <p>Ведення акаунту, постингу, таргет. Ваш бренд працює як годинник.</p>
-                    </div>
-                </div>
-
+      <div class="container">
+        <h2 class="reveal-up" style="color: white; text-align: left">
+          Алгоритм Роботи
+        </h2>
+        <div class="steps-wrapper">
+          <div class="step-row reveal-up">
+            <div class="step-index">01</div>
+            <div class="step-details">
+              <h3>Знайомство & Аналіз</h3>
+              <p>
+                Глибоке занурення в продукт. Визначаємо цілі, стиль комунікації
+                та ДНК бренду.
+              </p>
             </div>
+          </div>
+
+          <div class="step-row reveal-up">
+            <div class="step-index">02</div>
+            <div class="step-details">
+              <h3>Аналітика Ніші</h3>
+              <p>
+                Дослідження конкурентів та ЦА. Пошук точок зростання та бар'єрів
+                сприйняття.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-row reveal-up">
+            <div class="step-index">03</div>
+            <div class="step-details">
+              <h3>Стратегія</h3>
+              <p>
+                Фундамент бренду: Tone of Voice, візуальна система, рубрикатор.
+                Чітка логіка дій.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-row reveal-up">
+            <div class="step-index">04</div>
+            <div class="step-details">
+              <h3>Production</h3>
+              <p>
+                Створення контенту: зйомка, монтаж, копірайтинг. Кожна одиниця
+                контенту має мету.
+              </p>
+            </div>
+          </div>
+
+          <div class="step-row reveal-up">
+            <div class="step-index">05</div>
+            <div class="step-details">
+              <h3>Реалізація</h3>
+              <p>
+                Ведення акаунту, постингу, таргет. Ваш бренд працює як годинник.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="cases" class="cases section-padding">
-        <div class="container">
-            <h2 class="reveal-up">Результати (Кейси)</h2>
-            <div class="cases-flex reveal-up">
-                
-                <div class="case-card">
-                    <div class="case-img-placeholder">
-                        <div class="c-before">BRAND A</div>
-                        <div class="c-after">BRAND A+</div>
-                    </div>
-                    <div class="case-meta">
-                        <h4>Б'ЮТІ СФЕРА</h4>
-                        <p>+40% записів за 2 місяці</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <div class="case-img-placeholder">
-                        <div class="c-before">SHOP B</div>
-                        <div class="c-after">SHOP B+</div>
-                    </div>
-                    <div class="case-meta">
-                        <h4>ТОВАРНИЙ БІЗНЕС</h4>
-                        <p>Ріст охоплень у 5 разів</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <div class="case-img-placeholder">
-                        <div class="c-before">EXPERT C</div>
-                        <div class="c-after">EXPERT C+</div>
-                    </div>
-                    <div class="case-meta">
-                        <h4>ОСОБИСТИЙ БРЕНД</h4>
-                        <p>Sold Out на запуску</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <div class="case-img-placeholder">
-                        <div class="c-before">CAFE D</div>
-                        <div class="c-after">CAFE D+</div>
-                    </div>
-                    <div class="case-meta">
-                        <h4>HoReCa</h4>
-                        <p>Залучення локальної аудиторії</p>
-                    </div>
-                </div>
-
-                <div class="case-card">
-                    <div class="case-img-placeholder">
-                        <div class="c-before">SERVICE E</div>
-                        <div class="c-after">SERVICE E+</div>
-                    </div>
-                    <div class="case-meta">
-                        <h4>СФЕРА ПОСЛУГ</h4>
-                        <p>Налаштування воронки продажів</p>
-                    </div>
-                </div>
-
+      <div class="container">
+        <h2 class="reveal-up">Результати (Кейси)</h2>
+        <div class="cases-flex reveal-up">
+          <div class="case-card">
+            <div class="case-img-placeholder">
+              <div class="c-before">BRAND A</div>
+              <div class="c-after">BRAND A+</div>
             </div>
+            <div class="case-meta">
+              <h4>Б'ЮТІ СФЕРА</h4>
+              <p>+40% записів за 2 місяці</p>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-img-placeholder">
+              <div class="c-before">SHOP B</div>
+              <div class="c-after">SHOP B+</div>
+            </div>
+            <div class="case-meta">
+              <h4>ТОВАРНИЙ БІЗНЕС</h4>
+              <p>Ріст охоплень у 5 разів</p>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-img-placeholder">
+              <div class="c-before">EXPERT C</div>
+              <div class="c-after">EXPERT C+</div>
+            </div>
+            <div class="case-meta">
+              <h4>ОСОБИСТИЙ БРЕНД</h4>
+              <p>Sold Out на запуску</p>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-img-placeholder">
+              <div class="c-before">CAFE D</div>
+              <div class="c-after">CAFE D+</div>
+            </div>
+            <div class="case-meta">
+              <h4>HoReCa</h4>
+              <p>Залучення локальної аудиторії</p>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-img-placeholder">
+              <div class="c-before">SERVICE E</div>
+              <div class="c-after">SERVICE E+</div>
+            </div>
+            <div class="case-meta">
+              <h4>СФЕРА ПОСЛУГ</h4>
+              <p>Налаштування воронки продажів</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="training" class="training section-padding">
-        <div class="container reveal-up">
-            <p style="color: var(--brand-red); font-weight: 700; letter-spacing: 2px;">ACADEMY</p>
-            <h2>Навчання SMM</h2>
-            <p style="color: white; max-width: 600px; margin: 0 auto 40px auto;">Практичний курс на базі реальних кейсів агенції. Найкращих студентів запрошуємо в команду.</p>
-            <a href="#contact" class="btn">Програма Курсу</a>
-        </div>
+      <div class="container reveal-up">
+        <p
+          style="color: var(--brand-red); font-weight: 700; letter-spacing: 2px"
+        >
+          ACADEMY
+        </p>
+        <h2>Навчання SMM</h2>
+        <p style="color: white; max-width: 600px; margin: 0 auto 40px auto">
+          Практичний курс на базі реальних кейсів агенції. Найкращих студентів
+          запрошуємо в команду.
+        </p>
+        <a href="#contact" class="btn">Програма Курсу</a>
+      </div>
     </section>
 
     <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                
-                <div class="footer-col" style="flex: 2; min-width: 250px;">
-                    <a href="#" class="footer-brand">
-                        <img src="https://cdn.discordapp.com/attachments/1365890426854309972/1449314355828228148/logo_white.PNG?ex=693e72ad&is=693d212d&hm=6cce9daccda97000a87754c489a55bfb38c1f4df79287ad6b28ea86315d03e18&" alt="Onufranka Logo">
-                    </a>
-                    <p style="max-width: 300px; font-size: 0.9rem;">Професійний SMM супровід вашого бізнесу. Працюємо по всьому світу.</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col" style="flex: 2; min-width: 250px">
+            <a href="#" class="footer-brand">
+              <img src="https://i.imgur.com/4MS4LPV.png" alt="Onufranka Logo" />
+            </a>
+            <p style="max-width: 300px; font-size: 0.9rem">
+              Професійний SMM супровід вашого бізнесу. Працюємо по всьому світу.
+            </p>
+          </div>
 
-                <div class="footer-col" style="flex: 1; min-width: 200px;">
-                    <h4>Контакти</h4>
-                    <ul class="footer-list">
-                        <li>м. Камʼянець-Подільський<br>вул. Першотравнева 1</li>
-                        <li><a href="tel:+380957095690">+380 95 709 56 90</a></li>
-                    </ul>
-                </div>
+          <div class="footer-col" style="flex: 1; min-width: 200px">
+            <h4>Контакти</h4>
+            <ul class="footer-list">
+              <li>м. Камʼянець-Подільський<br />вул. Першотравнева 1</li>
+              <li><a href="tel:+380957095690">+380 95 709 56 90</a></li>
+            </ul>
+          </div>
 
-                <div class="footer-col" style="flex: 1.2; min-width: 250px;">
-                    <h4>Соцмережі</h4>
-                    
-                    <a href="https://www.instagram.com/onufranka_smm_agency" target="_blank" class="social-link-row">
-                        <div class="social-icon-circle">
-                            <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                        </div>
-                        <div>
-                            <span class="social-label">Офіційна сторінка</span>
-                            <span class="social-text">Instagram Агенції</span>
-                        </div>
-                    </a>
+          <div class="footer-col" style="flex: 1.2; min-width: 250px">
+            <h4>Соцмережі</h4>
 
-                    <a href="https://www.instagram.com/onufranka" target="_blank" class="social-link-row">
-                        <div class="social-icon-circle">
-                            <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-                        </div>
-                        <div>
-                            <span class="social-label">Особистий профіль</span>
-                            <span class="social-text">Instagram Власниці</span>
-                        </div>
-                    </a>
-                </div>
+            <a
+              href="https://www.instagram.com/onufranka_smm_agency"
+              target="_blank"
+              class="social-link-row"
+            >
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span class="social-label">Офіційна сторінка</span>
+                <span class="social-text">Instagram Агенції</span>
+              </div>
+            </a>
 
-            </div>
-            <div class="copyright">
-                &copy; 2026 Onufranka SMM Agency. Всі права захищено.
-            </div>
+            <a
+              href="https://www.instagram.com/onufranka"
+              target="_blank"
+              class="social-link-row"
+            >
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 448 512">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <span class="social-label">Особистий профіль</span>
+                <span class="social-text">Instagram Власниці</span>
+              </div>
+            </a>
+          </div>
         </div>
+        <div class="copyright">
+          &copy; 2026 Onufranka SMM Agency. Всі права захищено.
+        </div>
+      </div>
     </footer>
 
     <script>
-        // --- Mobile Menu Logic ---
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+      // --- Mobile Menu Logic ---
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
         });
+      });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
+      // --- Persistent Header Logic (Desktop vs Mobile) ---
+      let lastScrollTop = 0;
+      const header = document.getElementById('header');
+      const scrollThreshold = 100;
+      const mobileBreakpoint = 992;
 
-        // --- Persistent Header Logic (Desktop vs Mobile) ---
-        let lastScrollTop = 0;
-        const header = document.getElementById('header');
-        const scrollThreshold = 100;
-        const mobileBreakpoint = 992; 
-
-        function handleScroll() {
-            // Keep persistent on Desktop
-            if (window.innerWidth > mobileBreakpoint) {
-                 header.classList.remove('scroll-down', 'scroll-up');
-                 return;
-            }
-
-            // Mobile hide logic
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-                // Scrolling Down -> Hide
-                header.classList.remove('scroll-up');
-                header.classList.add('scroll-down');
-            } else {
-                // Scrolling Up -> Show
-                if(scrollTop < lastScrollTop) {
-                    header.classList.remove('scroll-down');
-                    header.classList.add('scroll-up');
-                }
-            }
-            
-            // At top -> Show
-            if (scrollTop <= 0) {
-                 header.classList.remove('scroll-down');
-                 header.classList.remove('scroll-up');
-            }
-
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      function handleScroll() {
+        // Keep persistent on Desktop
+        if (window.innerWidth > mobileBreakpoint) {
+          header.classList.remove('scroll-down', 'scroll-up');
+          return;
         }
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
+        // Mobile hide logic
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
 
-        // --- Scroll Reveal Animation ---
-        const revealElems = document.querySelectorAll('.reveal-up');
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+          // Scrolling Down -> Hide
+          header.classList.remove('scroll-up');
+          header.classList.add('scroll-down');
+        } else {
+          // Scrolling Up -> Show
+          if (scrollTop < lastScrollTop) {
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+          }
+        }
 
-        const revealOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
+        // At top -> Show
+        if (scrollTop <= 0) {
+          header.classList.remove('scroll-down');
+          header.classList.remove('scroll-up');
+        }
 
-        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            });
-        }, revealOptions);
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }
 
-        revealElems.forEach(elem => {
-            revealOnScroll.observe(elem);
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleScroll);
+
+      // --- Scroll Reveal Animation ---
+      const revealElems = document.querySelectorAll('.reveal-up');
+
+      const revealOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const revealOnScroll = new IntersectionObserver(function (
+        entries,
+        observer
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
         });
+      },
+      revealOptions);
+
+      revealElems.forEach(elem => {
+        revealOnScroll.observe(elem);
+      });
     </script>
-</body>
+  </body>
 </html>
