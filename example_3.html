@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onufranka SMM Agency | Editorial Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111111;
+            --text-gray: #666666;
+            --brand-red: #D61A2A; 
+            --line-color: #e0e0e0;
+            --font-head: 'Playfair Display', serif;
+            --font-body: 'Manrope', sans-serif;
+            --header-height: 100px;
+            --transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* FIX: Strict overflow hidden to prevent horizontal scrolling */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-head);
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--text-main);
+        }
+
+        h1 { margin-bottom: 20px; }
+        
+        h2 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+        
+        h2::after {
+            content: '.';
+            color: var(--brand-red);
+        }
+
+        p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: 140px 0;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 45px;
+            background-color: var(--text-main);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid var(--text-main);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-main);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--line-color);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--brand-red);
+            color: var(--brand-red);
+        }
+
+        /* --- Header --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: rgba(255, 255, 255, 0.98);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .header.scrolled {
+            border-bottom-color: var(--line-color);
+        }
+
+        @media (max-width: 992px) {
+            .header.scroll-down { transform: translateY(-100%); }
+            .header.scroll-up { transform: translateY(0); }
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 90px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--brand-red);
+            border-radius: 50%;
+            transform: translateY(-50%) scale(0);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::before {
+            transform: translateY(-50%) scale(1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 2px;
+            background-color: var(--text-main);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding-top: calc(var(--header-height) + 40px);
+            padding-bottom: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            align-items: center;
+            gap: 60px;
+            width: 100%; /* Ensure it fits */
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .location-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-red);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            margin: 30px 0 40px;
+            max-width: 450px;
+            border-left: 1px solid var(--brand-red);
+            padding-left: 20px;
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+            height: 700px;
+            overflow: hidden;
+            width: 100%; /* Ensure width is contained */
+        }
+
+        .hero-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: transform 1.5s ease;
+        }
+        
+        .hero-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        /* --- About / Philosophy --- */
+        .philosophy {
+            background-color: #fafafa;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .big-quote {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            line-height: 1.4;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            border-left: 1px solid var(--line-color);
+            padding-left: 40px;
+        }
+
+        .f-item h4 {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .f-item svg {
+            width: 20px;
+            fill: var(--brand-red);
+        }
+
+        .f-item p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* --- Services (Accordion Style) --- */
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid var(--text-main);
+        }
+
+        .service-row {
+            border-bottom: 1px solid var(--line-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .service-row.active {
+            background-color: #fffcfc;
+            border-bottom-color: var(--brand-red);
+        }
+
+        .service-header {
+            display: grid;
+            grid-template-columns: 0.5fr 3fr 0.5fr;
+            align-items: center;
+            padding: 40px 0;
+            cursor: pointer;
+        }
+
+        .s-num {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--brand-red);
+            font-style: italic;
+        }
+
+        .service-header h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+            transition: var(--transition);
+        }
+
+        .s-icon {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.4s ease;
+        }
+        
+        /* Rotate '+' to 'x' when active */
+        .service-row.active .s-icon {
+            transform: rotate(45deg);
+            color: var(--brand-red);
+        }
+
+        .service-row:hover h3 {
+            padding-left: 10px;
+            color: var(--brand-red);
+        }
+
+        /* Hidden Content */
+        .service-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+            padding-left: calc(0.5fr + 30px); /* Align with text roughly */
+            padding-right: 50px;
+            opacity: 0;
+        }
+        
+        .service-row.active .service-details {
+            max-height: 500px; /* Arbitrary large height */
+            transition: max-height 0.6s ease-in-out;
+            opacity: 1;
+            padding-bottom: 40px;
+        }
+
+        .service-details p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .service-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-details li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .service-details li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 5px;
+            height: 1px;
+            background-color: var(--brand-red);
+        }
+
+
+        /* --- Process --- */
+        .process {
+            overflow: hidden;
+        }
+
+        .process-track {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--line-color);
+            border-bottom: 1px solid var(--line-color);
+            width: 100%;
+        }
+
+        .process-step {
+            padding: 50px 30px;
+            border-right: 1px solid var(--line-color);
+            position: relative;
+            transition: var(--transition);
+            min-width: 0; /* Prevents grid blowout */
+        }
+
+        .process-step:last-child {
+            border-right: none;
+        }
+        
+        .process-step:hover {
+            background-color: var(--text-main);
+        }
+        
+        .process-step:hover h3, 
+        .process-step:hover p, 
+        .process-step:hover .p-num {
+            color: white;
+        }
+
+        .p-num {
+            font-size: 3rem;
+            font-family: var(--font-head);
+            color: #f0f0f0;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+        
+        .process-step:hover .p-num {
+            color: rgba(255,255,255,0.2);
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: var(--font-body);
+            font-weight: 700;
+        }
+
+        /* --- Cases --- */
+        .cases-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .case-card {
+            margin-bottom: 60px;
+        }
+
+        .cases-wrapper .case-col:nth-child(2) {
+            margin-top: 120px;
+        }
+
+        .case-image {
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .case-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 5px 15px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .case-split {
+            display: flex;
+            height: 100%;
+        }
+        .cs-left, .cs-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+            position: relative;
+        }
+        .cs-left { background: #999; }
+        .cs-right { background: var(--brand-red); }
+        .cs-left::after { content: 'BEFORE'; position: absolute; bottom: 10px; font-size: 0.7rem; opacity: 0.8; }
+        .cs-right::after { content: 'AFTER'; position: absolute; bottom: 10px; font-size: 0.7rem; opacity: 0.8; }
+
+        .case-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .case-card p {
+            font-family: var(--font-head);
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        /* --- Training --- */
+        .training {
+            background-color: var(--text-main);
+            color: white;
+            text-align: center;
+        }
+        
+        .training h2, .training h3, .training p {
+            color: white;
+        }
+        
+        .training h2::after { content: none; }
+
+        .training-box {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            padding: 80px 0 30px;
+            background-color: #fcfcfc;
+            border-top: 1px solid var(--line-color);
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            margin-bottom: 25px;
+        }
+
+        .footer-heading {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .footer-contact li {
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            list-style: none;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .social-link:hover {
+            color: var(--brand-red);
+        }
+        
+        .social-link svg {
+            width: 18px;
+            fill: currentColor;
+        }
+        
+        .social-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #999;
+            margin-left: auto;
+        }
+
+        .footer-btm {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 992px) {
+            h2 { font-size: 2.5rem; }
+            
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero { text-align: center; padding-top: 120px; }
+            .hero-desc { margin: 30px auto; border-left: none; padding: 0; }
+            .hero-img-wrapper { height: 400px; }
+            
+            .philosophy-grid { grid-template-columns: 1fr; }
+            .features-list { border-left: none; padding-left: 0; }
+            
+            /* Service header needs to fit mobile */
+            .service-header {
+                grid-template-columns: 40px 1fr 30px;
+            }
+            .service-header h3 { font-size: 1.5rem; }
+            .service-details { padding-left: 0; padding-right: 0; }
+            
+            /* Ensure Process steps stack correctly */
+            .process-track {
+                grid-template-columns: 1fr;
+            }
+            .process-step { border-right: none; border-bottom: 1px solid var(--line-color); }
+            
+            .cases-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .cases-wrapper .case-col:nth-child(2) { margin-top: 0; }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s;
+                border-left: 1px solid #eee;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+            
+            .hamburger { display: flex; z-index: 1001; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="https://media.discordapp.net/attachments/1365890426854309972/1449314284872929312/logo_black.PNG?ex=693e729c&is=693d211c&hm=db3b49319cea370e8aa3acc93437113183170bfb12ce63fbdab1e645e75fb172&=&format=webp&quality=lossless&width=1470&height=1182" alt="Onufranka SMM Agency">
+            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">Філософія</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#process">Процес</a></li>
+                    <li><a href="#cases">Кейси</a></li>
+                    <li><a href="#training">Навчання</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-layout">
+            <div class="hero-content reveal">
+                <span class="location-tag">Ukraine — Worldwide</span>
+                <h1>ONUFRANKA<br><span>SMM AGENCY</span></h1>
+                <div class="hero-desc">
+                    Ми будуємо системи комунікації. Ваш зовнішній відділ маркетингу з індивідуальним підходом та фокусом на бізнес-результат.
+                </div>
+                <a href="#contact" class="btn">Замовити консультацію</a>
+            </div>
+            <div class="hero-img-wrapper reveal">
+                <img src="https://media.discordapp.net/attachments/1365890426854309972/1449314284357026013/owner.jpg?ex=693e729c&is=693d211c&hm=64ffe7a9b524920ce83f99213786f84f3f6bfbcd45decc53b55a1e7018b3edad&=&format=webp&width=887&height=1182" alt="Анастасія Онуфран">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="philosophy section-padding">
+        <div class="container philosophy-grid">
+            <div class="reveal">
+                <p class="big-quote">"Ми не просто створюємо контент. Ми перетворюємо соцмережі на стабільний канал прибутку для вашого бізнесу."</p>
+                <a href="#services" class="btn-outline" style="margin-top: 20px; padding: 10px 30px; display:inline-block;">Дізнатись більше</a>
+            </div>
+            <div class="features-list reveal">
+                <div class="f-item">
+                    <h4><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Офіційно</h4>
+                    <p>Працюємо як ФОП, договір, рахунок.</p>
+                </div>
+                <div class="f-item">
+                    <h4><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Worldwide</h4>
+                    <p>Клієнти по всьому світу.</p>
+                </div>
+                <div class="f-item">
+                    <h4><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2h2v5h5v2h-5v5h-2v-5H7v-2h5V5z" fill="none" d="M0 0h24v24H0V0z"/><path d="M12 2L2 12l10 10 10-10L12 2zm0 4l3 3-3 3-3-3 3-3z"/></svg> Стратегія</h4>
+                    <p>Індивідуальні рішення, без шаблонів.</p>
+                </div>
+                <div class="f-item">
+                    <h4><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg> ROI</h4>
+                    <p>Фокус на окупність інвестицій.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="reveal">Послуги</h2>
+            <div class="services-list reveal">
+                
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">01</div>
+                        <h3>Стратегія та План</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Розробка фундаменту вашого просування. Ми не працюємо навмання, а створюємо чіткий план дій для досягнення бізнес-цілей.</p>
+                        <ul>
+                            <li>Аналіз цільової аудиторії та конкурентів</li>
+                            <li>Розробка детального контент-плану (рубрикатор)</li>
+                            <li>Визначення KPI та точок росту</li>
+                            <li>Побудова воронки продажів у профілі</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">02</div>
+                        <h3>Візуал та Дизайн</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Створення естетичного та впізнаваного обличчя бренду, яке закохує з першого погляду та викликає довіру.</p>
+                        <ul>
+                            <li>Розробка фірмового стилю (шрифти, кольори)</li>
+                            <li>Дизайн шаблонів для Stories та Highlights</li>
+                            <li>Оформлення шапки профілю та стрічки</li>
+                            <li>Професійна ретуш та корекція кольору</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">03</div>
+                        <h3>Копірайтинг</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Тексти, які не просто читають, а які продають. Ми знаходимо правильні слова, щоб донести цінність вашого продукту.</p>
+                        <ul>
+                            <li>Розробка Tone of Voice бренду</li>
+                            <li>Написання постів, що продають та залучають</li>
+                            <li>Сценарії для Stories та Reels</li>
+                            <li>Створення слоганів та офферів</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                 <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">04</div>
+                        <h3>Фото та Відео</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Високоякісний візуальний контент. Ми організовуємо зйомки "під ключ" або працюємо з вашими матеріалами.</p>
+                        <ul>
+                            <li>Організація професійних фотосесій</li>
+                            <li>Зйомка та монтаж Reels/TikTok</li>
+                            <li>Предметна та іміджева зйомка</li>
+                            <li>Виїзд у різні міста за домовленістю</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">05</div>
+                        <h3>Таргетована Реклама</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Налаштування рекламних кампаній для залучення саме вашої цільової аудиторії та збільшення продажів.</p>
+                        <ul>
+                            <li>Створення креативів для реклами</li>
+                            <li>Налаштування аудиторій та ретаргетингу</li>
+                            <li>Запуск та оптимізація кампаній</li>
+                            <li>Аналіз ефективності та звітність</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">06</div>
+                        <h3>Комплексне Ведення</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Повний супровід вашого акаунту. Ми беремо на себе всю рутину, щоб ви могли займатися бізнесом.</p>
+                        <ul>
+                            <li>Регулярний постинг (Stories, пости, Reels)</li>
+                            <li>Модерація коментарів та Direct</li>
+                            <li>Комунікація з підписниками</li>
+                            <li>Оперативне реагування на інфоприводи</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-row" onclick="toggleService(this)">
+                    <div class="service-header">
+                        <div class="s-num">07</div>
+                        <h3>Web-Розробка</h3>
+                        <div class="s-icon">+</div>
+                    </div>
+                    <div class="service-details">
+                        <p>Створення зручних та конверсійних веб-ресурсів для вашого бізнесу.</p>
+                        <ul>
+                            <li>Розробка лендингів (Landing Page)</li>
+                            <li>Багатосторінкові сайти</li>
+                            <li>Інтеграція з CRM та платіжними системами</li>
+                            <li>Технічна підтримка</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <h2 class="reveal">Етапи Співпраці</h2>
+            <div class="process-track reveal">
+                <div class="process-step">
+                    <span class="p-num">1</span>
+                    <h3>Знайомство</h3>
+                    <p>Аналіз цілей, продукту та ДНК бренду.</p>
+                </div>
+                <div class="process-step">
+                    <span class="p-num">2</span>
+                    <h3>Аналітика</h3>
+                    <p>Ніша, конкуренти, точки зростання.</p>
+                </div>
+                <div class="process-step">
+                    <span class="p-num">3</span>
+                    <h3>Стратегія</h3>
+                    <p>Tone of voice, візуал, рубрикатор.</p>
+                </div>
+                <div class="process-step">
+                    <span class="p-num">4</span>
+                    <h3>Контент</h3>
+                    <p>Зйомка, копірайтинг, дизайн.</p>
+                </div>
+                <div class="process-step">
+                    <span class="p-num">5</span>
+                    <h3>Запуск</h3>
+                    <p>Постинг, таргет, модерація.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="section-padding" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="reveal">Selected Works</h2>
+            <div class="cases-wrapper">
+                <div class="case-col reveal">
+                    <div class="case-card">
+                        <div class="case-image">
+                             <span class="case-badge">Б'ЮТІ СФЕРА</span>
+                             <div class="case-split">
+                                 <div class="cs-left">BRAND A</div>
+                                 <div class="cs-right">BRAND A+</div>
+                             </div>
+                        </div>
+                        <h3>Салон краси "Естет"</h3>
+                        <p>+40% записів за 2 місяці</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                             <span class="case-badge">ОСОБИСТИЙ БРЕНД</span>
+                             <div class="case-split">
+                                 <div class="cs-left">EXPERT C</div>
+                                 <div class="cs-right">EXPERT C+</div>
+                             </div>
+                        </div>
+                        <h3>Запуск Інфопродукту</h3>
+                        <p>Sold Out за 24 години</p>
+                    </div>
+                     <div class="case-card">
+                        <div class="case-image">
+                             <span class="case-badge">СФЕРА ПОСЛУГ</span>
+                             <div class="case-split">
+                                 <div class="cs-left">SERVICE E</div>
+                                 <div class="cs-right">SERVICE E+</div>
+                             </div>
+                        </div>
+                        <h3>Юридична компанія</h3>
+                        <p>Воронка продажів в Direct</p>
+                    </div>
+                </div>
+                
+                <div class="case-col reveal">
+                    <div class="case-card">
+                        <div class="case-image">
+                             <span class="case-badge">ТОВАРНИЙ БІЗНЕС</span>
+                             <div class="case-split">
+                                 <div class="cs-left">SHOP B</div>
+                                 <div class="cs-right">SHOP B+</div>
+                             </div>
+                        </div>
+                        <h3>Магазин Одягу</h3>
+                        <p>Ріст охоплень у 5 разів</p>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                             <span class="case-badge">HORECA</span>
+                             <div class="case-split">
+                                 <div class="cs-left">CAFE D</div>
+                                 <div class="cs-right">CAFE D+</div>
+                             </div>
+                        </div>
+                        <h3>Міське Кафе</h3>
+                        <p>Залучення локальної аудиторії</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training" class="training section-padding">
+        <div class="container reveal">
+            <div class="training-box">
+                <h2 style="margin-bottom: 20px;">SMM Academy</h2>
+                <h3 style="font-family: var(--font-body); font-size: 1.2rem; margin-bottom: 30px; font-weight: 300;">Навчання професії майбутнього на базі агенції</h3>
+                <p style="margin-bottom: 40px; opacity: 0.8;">Курси з SMM та Таргету. Можливість працевлаштування для кращих студентів.</p>
+                <a href="#contact" class="btn" style="background: white; color: var(--text-main); border-color: white;">Дізнатись деталі</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col" style="flex: 1.5;">
+                    <a href="#" class="footer-logo">
+                         <img src="https://media.discordapp.net/attachments/1365890426854309972/1449314284872929312/logo_black.PNG?ex=693e729c&is=693d211c&hm=db3b49319cea370e8aa3acc93437113183170bfb12ce63fbdab1e645e75fb172&=&format=webp&quality=lossless&width=1470&height=1182" alt="Logo">
+                    </a>
+                    <p style="font-size: 0.9rem; max-width: 300px;">
+                        Створюємо сенси, що продають. Ваш надійний партнер у digital-просторі.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-heading">Контакти</div>
+                    <ul class="footer-contact">
+                        <li>Камʼянець-Подільський</li>
+                        <li>вул. Першотравнева 1</li>
+                        <li><a href="tel:+380957095690">+380 95 709 56 90</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-heading">Соціальні мережі</div>
+                    <a href="https://www.instagram.com/onufranka_smm_agency" target="_blank" class="social-link">
+                        <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        <span>Instagram Агенції</span>
+                        <span class="social-tag">OFFICIAL</span>
+                    </a>
+                    <a href="https://www.instagram.com/onufranka" target="_blank" class="social-link">
+                        <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.9 0-184.9zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        <span>Instagram Власниці</span>
+                        <span class="social-tag">PERSONAL</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-btm">
+                &copy; 2026 Onufranka SMM Agency. Всі права захищено.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Scroll
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset;
+            
+            // Add border on scroll
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Mobile Hide
+            if (window.innerWidth <= 992) {
+                if (scrollTop > lastScroll && scrollTop > 100) {
+                    header.classList.add('scroll-down');
+                    header.classList.remove('scroll-up');
+                } else if (scrollTop < lastScroll) {
+                    header.classList.remove('scroll-down');
+                    header.classList.add('scroll-up');
+                }
+            }
+            lastScroll = scrollTop;
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Services Toggle Function
+        function toggleService(element) {
+            // Close other open items (Optional: remove this block if you want multiple open)
+            const allItems = document.querySelectorAll('.service-row');
+            allItems.forEach(item => {
+                if(item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle clicked item
+            element.classList.toggle('active');
+        }
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
