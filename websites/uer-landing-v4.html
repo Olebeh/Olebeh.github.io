@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Універсальні експертні рішення — охорона праці та промислова безпека | Івано-Франківськ</title>
+<meta name="description" content="ТОВ «Універсальні експертні рішення» — навчання з охорони праці, експертні обстеження, технічне діагностування, експертиза проектної документації, аудит. Івано-Франківськ.">
+<meta name="keywords" content="охорона праці, промислова безпека, експертне обстеження, технічне діагностування, навчання з охорони праці, Держпраці, Івано-Франківськ">
+<meta property="og:title" content="Універсальні експертні рішення">
+<meta property="og:description" content="Наші експертні рішення — ваша безпека. Охорона праці, технічна експертиза, дозвільна документація, промислова безпека.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#CA2026;
+  --red-dk:#A0161B;
+  --red-lt:#FF5A61;
+  --red-glow:rgba(214,40,46,.34);
+
+  /* burgundy surfaces */
+  --b-0:#170709;
+  --b-1:#20090D;
+  --b-2:#2C0D12;
+  --b-3:#43141A;
+  --b-card-a:#3A1117;
+  --b-card-b:#230A0F;
+  --b-line:#54212A;
+  --b-line-2:#6A2B34;
+
+  --d-txt:#F2E7E8;
+  --d-mute:#C7A7AB;
+  --d-mute-2:#A4858A;
+
+  --ink:#141719;
+  --ink-2:#3D444B;
+  --ink-3:#606A73;
+  --mute:#8E979F;
+
+  --bg:#F3F3F1;
+  --card:#FFFFFF;
+  --line:#E3E3DF;
+
+  --f-disp:"Rubik",system-ui,sans-serif;
+  --f-body:"Manrope",system-ui,sans-serif;
+  --f-mono:"Roboto Mono",ui-monospace,monospace;
+
+  --r:14px;
+  --r-s:10px;
+  --sh1:0 1px 2px rgba(13,16,19,.04), 0 4px 14px rgba(13,16,19,.055);
+  --sh2:0 2px 5px rgba(13,16,19,.05), 0 14px 34px rgba(13,16,19,.10);
+  --sh3:0 10px 26px rgba(13,16,19,.11), 0 28px 58px rgba(13,16,19,.13);
+
+  --wrap:1180px;
+  --pad:26px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--f-body);font-size:16px;line-height:1.68;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit}
+button{font:inherit;color:inherit}
+iframe{border:0;display:block}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;letter-spacing:-.018em}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:100px 0;position:relative}
+.sec--dark{
+  color:var(--d-txt);
+  background:
+    radial-gradient(120% 90% at 82% 0%, var(--red-glow), transparent 58%),
+    linear-gradient(158deg, var(--b-0) 0%, var(--b-2) 46%, var(--b-3) 100%);
+}
+.darkband{
+  background:
+    radial-gradient(70% 46% at 84% 6%, var(--red-glow), transparent 60%),
+    radial-gradient(60% 40% at 10% 96%, rgba(214,40,46,.16), transparent 62%),
+    linear-gradient(168deg, var(--b-0) 0%, var(--b-2) 44%, var(--b-3) 100%);
+}
+.darkband .sec--dark{background:none}
+
+/* ============ header ============ */
+.hdr{position:fixed;inset:12px 0 auto 0;z-index:80;pointer-events:none}
+.hdr-in{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad);pointer-events:auto}
+.hdr-bar{
+  display:flex;align-items:center;gap:22px;height:70px;padding:0 10px 0 20px;
+  border-radius:999px;background:rgba(35,10,15,.55);backdrop-filter:blur(14px) saturate(1.3);
+  border:1px solid rgba(255,255,255,.12);transition:background .3s,border-color .3s,box-shadow .3s;
+}
+.hdr.on .hdr-bar{background:rgba(255,255,255,.93);border-color:var(--line);box-shadow:var(--sh2)}
+.logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.logo .lock{height:34px;width:auto;color:#fff;transition:color .3s}
+.hdr.on .logo .lock{color:var(--ink)}
+.logo .mark-only{display:none;height:32px;width:auto;color:#fff;transition:color .3s}
+.hdr.on .logo .mark-only{color:var(--red)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{
+  font-size:14px;font-weight:600;text-decoration:none;color:rgba(255,255,255,.82);
+  padding:9px 13px;border-radius:999px;transition:background .18s,color .18s;white-space:nowrap;
+}
+.nav a:hover{background:rgba(255,255,255,.14);color:#fff}
+.hdr.on .nav a{color:var(--ink-2)}
+.hdr.on .nav a:hover{background:rgba(20,23,25,.06);color:var(--ink)}
+.hdr-cta{
+  font-family:var(--f-disp);font-size:13.5px;font-weight:600;text-decoration:none;
+  background:var(--red);color:#fff;padding:13px 20px;border-radius:999px;
+  transition:background .18s,transform .18s;white-space:nowrap;
+}
+.hdr-cta:hover{background:var(--red-dk);transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-left:auto;border-radius:999px}
+.burger span{display:block;width:20px;height:2px;background:#fff;margin:4.5px 0;transition:.24s;border-radius:2px}
+.hdr.on .burger span{background:var(--ink)}
+.burger.x span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.drawer{
+  display:none;margin-top:8px;background:#fff;border-radius:var(--r);box-shadow:var(--sh3);
+  padding:10px;pointer-events:auto;
+}
+.drawer.show{display:block}
+.drawer a{display:block;padding:13px 16px;text-decoration:none;font-weight:600;font-size:15px;border-radius:var(--r-s)}
+.drawer a:hover{background:var(--bg)}
+.drawer .dl{display:flex;gap:8px;padding:10px 6px 4px;flex-wrap:wrap}
+
+/* ============ hero ============ */
+.hero{
+  position:relative;color:#fff;overflow:hidden;padding:158px 0 92px;
+  background:
+    radial-gradient(90% 70% at 88% -10%, var(--red-glow), transparent 60%),
+    linear-gradient(152deg, var(--b-0) 0%, var(--b-2) 48%, var(--b-3) 100%);
+}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.030) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.030) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:linear-gradient(180deg,#000,transparent 78%);
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 78%);
+}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--f-mono);font-size:11.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:#E2CDD0;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  padding:8px 15px;border-radius:999px;margin-bottom:26px;
+}
+.chip s{text-decoration:none;width:6px;height:6px;border-radius:50%;background:var(--red-lt);box-shadow:0 0 0 4px rgba(255,90,97,.18)}
+.hero h1{font-size:clamp(34px,4.9vw,60px);font-weight:800;line-height:1.05;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--red-lt)}
+.hero p.sub{margin:24px 0 0;font-size:17.5px;color:var(--d-mute);max-width:52ch;line-height:1.62}
+.hero p.sub b{color:#fff;font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;
+  font-family:var(--f-disp);font-size:14.5px;font-weight:600;padding:15px 26px;
+  border-radius:999px;border:1px solid transparent;transition:.2s;white-space:nowrap;
+}
+.btn--red{background:var(--red);color:#fff;box-shadow:0 6px 20px rgba(202,32,38,.34)}
+.btn--red:hover{background:var(--red-dk);transform:translateY(-2px);box-shadow:0 10px 26px rgba(202,32,38,.4)}
+.btn--wht{background:#fff;color:#2A0B10;box-shadow:0 6px 20px rgba(0,0,0,.22)}
+.btn--wht:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.btn--glass{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);color:#fff}
+.btn--glass:hover{background:rgba(255,255,255,.17)}
+.btn--out{border-color:var(--line);background:#fff;color:var(--ink)}
+.btn--out:hover{border-color:var(--ink);transform:translateY(-2px);box-shadow:var(--sh1)}
+
+/* ============ carousel ============ */
+.gal{position:relative}
+.gal-stage{
+  position:relative;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;
+  background:#1C0A0E;border:1px solid var(--b-line);box-shadow:0 24px 60px rgba(0,0,0,.42);
+}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide--svg{display:grid;place-items:center;padding:16px 16px 46px;background:#1C0A0E}
+.slide--svg svg{width:100%;height:auto;max-height:100%}
+.slide .cap{
+  position:absolute;left:0;right:0;bottom:0;padding:38px 20px 15px;
+  background:linear-gradient(180deg,transparent,rgba(15,4,6,.88));
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;color:#EAD8DA;line-height:1.5;
+}
+.gal-ui{display:flex;align-items:center;gap:12px;margin-top:16px}
+.gal-dots{display:flex;gap:7px;margin-right:auto}
+.gal-dots button{
+  width:9px;height:9px;padding:0;border:0;border-radius:50%;cursor:pointer;
+  background:rgba(255,255,255,.26);transition:background .2s,transform .2s;
+}
+.gal-dots button.on{background:var(--red-lt);transform:scale(1.25)}
+.gal-arw{
+  width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.07);cursor:pointer;display:grid;place-items:center;transition:.2s;
+}
+.gal-arw:hover{background:rgba(255,255,255,.16)}
+.gal-arw svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.dash{stroke-dasharray:3 4}
+
+/* ============ directions band ============ */
+.band{position:relative;z-index:3;margin-top:-46px}
+.band-in{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.dcard{
+  background:var(--card);border-radius:var(--r);padding:22px 20px 24px;box-shadow:var(--sh2);
+  display:flex;flex-direction:column;gap:13px;text-decoration:none;color:inherit;
+  transition:transform .22s,box-shadow .22s;
+}
+.dcard:hover{transform:translateY(-4px);box-shadow:var(--sh3)}
+.ico{width:42px;height:42px;border-radius:12px;background:rgba(202,32,38,.09);display:grid;place-items:center;flex-shrink:0}
+.ico svg{width:21px;height:21px;stroke:var(--red);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dcard b{font-family:var(--f-disp);font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.dcard span{font-size:13px;color:var(--mute);line-height:1.5}
+
+/* ============ section heads ============ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--f-mono);font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:16px;
+}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--red);border-radius:2px}
+.sec--dark .eyebrow{color:var(--red-lt)}
+.sec--dark .eyebrow::before{background:var(--red-lt)}
+.h2{font-size:clamp(28px,3.7vw,42px);font-weight:800}
+.lede{font-size:17px;color:var(--ink-3);max-width:64ch;margin:18px 0 0}
+.sec--dark .lede{color:var(--d-mute)}
+.shead{margin-bottom:46px;max-width:720px}
+
+/* ============ about ============ */
+.two{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:start}
+.prose p{margin:0 0 18px;color:var(--ink-2);font-size:16.5px}
+.prose p:last-child{margin-bottom:0}
+.prose b{font-weight:700;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:10px 34px;margin:26px 0 0;padding:0;list-style:none}
+.facts li{font-size:14px;color:var(--ink-3);line-height:1.4}
+.facts b{display:block;font-family:var(--f-mono);font-size:13.5px;color:var(--ink);font-weight:700;margin-top:3px}
+.free{
+  margin-top:28px;background:var(--card);border-radius:var(--r);box-shadow:var(--sh1);
+  padding:20px 24px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;
+  border-left:4px solid var(--red);
+}
+.free b{font-family:var(--f-disp);font-size:16px;font-weight:600}
+.free span{font-family:var(--f-mono);font-size:13.5px;color:var(--ink-3)}
+.free a{text-decoration:none;font-weight:700;color:var(--ink)}
+.free a:hover{color:var(--red)}
+
+.pr-list{display:flex;flex-direction:column;gap:10px}
+.pr{
+  background:var(--card);border-radius:var(--r-s);padding:16px 20px;box-shadow:var(--sh1);
+  display:flex;gap:15px;align-items:baseline;transition:transform .2s;
+}
+.pr:hover{transform:translateX(4px)}
+.pr i{font-family:var(--f-mono);font-style:normal;font-size:11.5px;font-weight:700;color:var(--red);flex-shrink:0}
+.pr b{font-family:var(--f-disp);font-size:15px;font-weight:600;display:block}
+.pr p{margin:2px 0 0;font-size:13.5px;color:var(--mute);line-height:1.5}
+
+/* ============ permits (compact, collapsible) ============ */
+.pwrap{
+  border:1px solid var(--b-line);border-radius:var(--r);overflow:hidden;
+  background:linear-gradient(160deg,var(--b-card-a),var(--b-card-b));
+}
+.ptog{
+  width:100%;display:flex;align-items:center;gap:18px;background:none;border:0;cursor:pointer;
+  padding:22px 26px;text-align:left;color:var(--d-txt);
+}
+.ptog .pt{flex:1;font-family:var(--f-disp);font-size:17px;font-weight:600;letter-spacing:-.012em}
+.ptog .pn{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--red-lt);border:1px solid rgba(255,90,97,.4);padding:5px 11px;border-radius:999px;white-space:nowrap;
+}
+.ptog .chev{
+  flex-shrink:0;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.09);
+  display:grid;place-items:center;transition:transform .3s;
+}
+.ptog .chev svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.pwrap.open .ptog .chev{transform:rotate(180deg)}
+.plist{overflow:hidden;height:0;transition:height .32s cubic-bezier(.4,0,.2,1)}
+.plist-in{padding:0 26px 8px}
+.prow{
+  display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;
+  padding:15px 0;border-top:1px solid rgba(255,255,255,.09);
+}
+.prow .kn{flex:1;min-width:260px;font-size:15px;color:var(--d-txt);line-height:1.45}
+.prow .no{font-family:var(--f-mono);font-size:14px;font-weight:700;color:var(--red-lt)}
+.prow .dt{font-family:var(--f-mono);font-size:12.5px;color:var(--d-mute-2)}
+.plist-in .fin{padding:16px 0 22px;font-size:14px;color:var(--d-mute-2);border-top:1px solid rgba(255,255,255,.09)}
+
+/* ============ accordion ============ */
+.acc{display:flex;flex-direction:column;gap:12px}
+.item{background:var(--card);border-radius:var(--r);box-shadow:var(--sh1);overflow:hidden;transition:box-shadow .24s}
+.item:hover{box-shadow:var(--sh2)}
+.item.open{box-shadow:var(--sh3)}
+.abtn{width:100%;display:flex;align-items:center;gap:18px;background:none;border:0;cursor:pointer;padding:24px 26px;text-align:left}
+.abtn .n{
+  font-family:var(--f-mono);font-size:11.5px;font-weight:700;color:var(--red);flex-shrink:0;
+  width:34px;height:34px;border-radius:10px;background:rgba(202,32,38,.09);display:grid;place-items:center;
+}
+.abtn .t{flex:1;font-family:var(--f-disp);font-size:clamp(16px,2vw,19px);font-weight:600;line-height:1.32;letter-spacing:-.012em;transition:color .18s}
+.abtn:hover .t,.item.open .t{color:var(--red)}
+.chev{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--bg);display:grid;place-items:center;transition:transform .3s,background .2s}
+.chev svg{width:14px;height:14px;stroke:var(--ink-2);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.item.open .chev{transform:rotate(180deg);background:rgba(202,32,38,.1)}
+.item.open .chev svg{stroke:var(--red)}
+.panel{overflow:hidden;height:0;transition:height .32s cubic-bezier(.4,0,.2,1)}
+.pin{padding:0 26px 28px 78px}
+.pin>p{margin:0 0 18px;color:var(--ink-3);font-size:15.5px;max-width:76ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+.cols ul{margin:0;padding:0;list-style:none}
+.cols li{padding:9px 0 9px 22px;font-size:15px;color:var(--ink-2);line-height:1.52;position:relative}
+.cols li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;border:2px solid var(--red)}
+.cols li b{font-weight:700;color:var(--ink)}
+.tag{margin:18px 0 0;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12px;color:var(--ink-3);background:var(--bg);padding:8px 14px;border-radius:999px}
+.norm{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.norm h4{margin:0 0 8px;font-family:var(--f-mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.norm p{margin:0;font-size:13.5px;color:var(--mute);line-height:1.62;max-width:88ch}
+
+/* ============ flow ============ */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.fst{background:var(--card);border-radius:var(--r);padding:24px 20px 26px;box-shadow:var(--sh1);position:relative;transition:transform .22s,box-shadow .22s}
+.fst:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.fst .n{font-family:var(--f-mono);font-size:12px;font-weight:700;color:#fff;background:var(--red);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;margin-bottom:16px}
+.fst b{font-family:var(--f-disp);font-size:15.5px;font-weight:600;line-height:1.3;display:block;letter-spacing:-.012em}
+.fst p{margin:8px 0 0;font-size:13.5px;color:var(--mute);line-height:1.55}
+
+/* ============ form ============ */
+.fgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;align-items:start}
+.fside p{color:var(--d-mute);font-size:16px;margin:0 0 18px;max-width:44ch}
+.fside ul{margin:22px 0 0;padding:0;list-style:none}
+.fside li{position:relative;padding:9px 0 9px 26px;font-size:15px;color:var(--d-txt);line-height:1.5}
+.fside li::before{
+  content:"";position:absolute;left:0;top:17px;width:9px;height:9px;border-radius:50%;
+  border:2px solid var(--red-lt);
+}
+.fcard{background:var(--card);border-radius:var(--r);padding:32px;box-shadow:0 30px 70px rgba(0,0,0,.32);color:var(--ink)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:block;margin-bottom:16px}
+.fld>span:first-of-type{display:block;font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.fld>span i{font-style:normal;color:var(--red)}
+.fld input,.fld select,.fld textarea{
+  width:100%;font:inherit;font-size:15px;color:var(--ink);background:#FAFAF8;
+  border:1px solid var(--line);border-radius:var(--r-s);padding:13px 15px;transition:border-color .18s,background .18s;
+}
+.fld textarea{min-height:104px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--red);background:#fff}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:var(--red);background:#FEF6F6}
+.fld .err{display:none;margin-top:5px;font-size:12.5px;font-weight:500;color:var(--red-dk)}
+.fld.bad .err{display:block}
+.chk{display:flex;gap:11px;align-items:flex-start;margin:4px 0 20px;font-size:13.5px;color:var(--ink-3);line-height:1.5;cursor:pointer}
+.chk input{width:18px;height:18px;margin:2px 0 0;accent-color:var(--red);flex-shrink:0}
+.chk.bad{color:var(--red-dk)}
+.chk.bad input{outline:2px solid var(--red);outline-offset:2px}
+.fsub{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.fsub .btn{border:0}
+.fnote{font-size:12.5px;color:var(--mute);max-width:32ch;line-height:1.5}
+.fmsg{margin-top:16px;padding:15px 18px;border-radius:var(--r-s);font-size:14.5px;line-height:1.55;display:none}
+.fmsg.ok{display:block;background:#F0F7F0;border:1px solid #CBE3CB;color:#28632C}
+.fmsg.no{display:block;background:#FDF2F2;border:1px solid #F2D2D3;color:var(--red-dk)}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+/* ============ contacts ============ */
+.cgrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:16px;align-items:stretch}
+.cbox{background:linear-gradient(160deg,var(--b-card-a),var(--b-card-b));border:1px solid var(--b-line);border-radius:var(--r);padding:34px}
+.crow{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.09)}
+.crow:first-child{padding-top:0}
+.crow:last-of-type{border-bottom:0}
+.crow .ico{width:38px;height:38px;border-radius:11px;background:rgba(255,90,97,.16)}
+.crow .ico svg{stroke:var(--red-lt)}
+.crow .lb{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--d-mute-2);display:block;margin-bottom:5px}
+.crow a{text-decoration:none}
+.crow a:hover{color:var(--red-lt)}
+.crow .mono{font-family:var(--f-mono);font-size:15px;font-weight:700;display:block;color:#fff}
+.crow .who{font-size:13px;color:var(--d-mute-2);font-weight:400}
+.crow>div:last-child{color:var(--d-txt);font-size:15px;line-height:1.55}
+.map{width:100%;height:100%;min-height:430px;border-radius:var(--r);filter:grayscale(1) contrast(1.05) brightness(.94);transition:filter .4s}
+.map:hover{filter:none}
+
+/* ============ footer ============ */
+.ftr{
+  color:var(--d-mute-2);padding:0 0 30px;font-size:14px;
+  background:
+    radial-gradient(90% 120% at 12% 0%, rgba(214,40,46,.22), transparent 62%),
+    linear-gradient(20deg, var(--b-0) 0%, var(--b-2) 60%, var(--b-3) 100%);
+}
+.ftr-top{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;padding:52px 0 32px}
+.ftr .logo .lock{color:#fff;height:32px}
+.ftr-tag{margin:16px 0 0;max-width:34ch;font-size:13.5px;line-height:1.62}
+.fnav{display:flex;gap:54px;flex-wrap:wrap}
+.fcol h4{font-family:var(--f-mono);font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin:0 0 12px}
+.fcol a{display:block;text-decoration:none;padding:5px 0;color:var(--d-mute-2);font-size:14px;transition:color .16s}
+.fcol a:hover{color:#fff}
+.ftr-bot{padding-top:22px;border-top:1px solid var(--b-line);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--f-mono);font-size:12px}
+
+/* ============ misc ============ */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.sec--dark :focus-visible,.hero :focus-visible,.ftr :focus-visible{outline-color:#fff}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ============ responsive ============ */
+@media(max-width:1080px){
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .gal{max-width:560px;margin:0 auto;width:100%}
+  .band-in{grid-template-columns:repeat(3,1fr)}
+  .two{grid-template-columns:1fr;gap:42px}
+  .flow{grid-template-columns:repeat(3,1fr)}
+  .fgrid{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr}
+  .map{min-height:340px}
+}
+@media(max-width:900px){
+  .nav{display:none}
+  .hdr-cta{display:none}
+  .burger{display:block}
+  .cols{grid-template-columns:1fr}
+  .pin{padding-left:26px}
+  .facts{grid-template-columns:repeat(2,auto)}
+}
+@media(max-width:700px){
+  :root{--pad:18px}
+  .sec{padding:66px 0}
+  .hero{padding:126px 0 76px}
+  .hdr-bar{height:62px;padding:0 8px 0 14px}
+  .logo .lock{display:none}
+  .logo .mark-only{display:block;height:30px}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .band-in{grid-template-columns:1fr}
+  .band{margin-top:-34px}
+  .cbox{padding:26px 22px}
+  .fcard{padding:24px 20px}
+  .frow{grid-template-columns:1fr;gap:0}
+  .abtn{padding:20px 18px;gap:14px}
+  .pin{padding:0 18px 24px}
+  .ptog{padding:20px 18px;gap:12px}
+  .plist-in{padding:0 18px 8px}
+  .fnav{gap:30px}
+}
+@media(max-width:420px){
+  .flow{grid-template-columns:1fr}
+  .ptog .pn{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="uer-lockup" viewBox="0 0 821.05 131.91">
+    <path fill="#CA2026" fill-rule="evenodd" d="M 37.24 74.20 L 112.70 74.20 L 112.70 20.17 L 20.17 20.17 L 20.17 111.73 L 95.63 111.73 L 95.63 131.91 L 0.00 131.91 L 0.00 0.00 L 132.39 0.00 L 132.39 94.37 L 37.24 94.37 Z M 37.24 36.57 L 95.44 36.57 L 95.44 56.74 L 37.24 56.74 Z M 37.24 36.57"/>
+    <path fill="currentColor" fill-rule="evenodd" d="M 230.07 21.45 L 220.17 46.05 C 216.16 56.01 212.32 62.36 199.59 58.94 L 201.12 51.38 C 205.98 52.77 208.09 51.55 209.57 46.88 L 193.35 21.49 L 204.76 21.49 L 214.46 39.25 L 220.89 21.45 Z M 307.09 59.07 L 307.09 21.50 L 319.59 21.50 C 323.43 21.50 326.38 22.28 328.45 23.82 C 330.53 25.38 331.57 27.52 331.57 30.27 C 331.57 32.32 330.93 34.10 329.64 35.64 C 328.35 37.17 326.73 38.23 324.78 38.82 L 324.78 38.91 C 327.23 39.23 329.21 40.21 330.72 41.82 C 332.22 43.44 332.98 45.46 332.98 47.91 C 332.98 51.32 331.84 54.04 329.57 56.04 C 327.30 58.05 324.20 59.07 320.25 59.07 Z M 314.59 27.47 L 314.59 36.75 L 318.16 36.75 C 319.87 36.75 321.22 36.32 322.21 35.44 C 323.19 34.57 323.68 33.36 323.68 31.78 C 323.68 28.90 321.71 27.47 317.77 27.47 Z M 314.59 42.79 L 314.59 53.10 L 319.04 53.10 C 320.95 53.10 322.43 52.63 323.49 51.69 C 324.56 50.75 325.09 49.45 325.09 47.79 C 325.09 46.20 324.56 44.98 323.50 44.10 C 322.44 43.23 320.94 42.79 318.98 42.79 Z M 266.38 123.52 L 255.58 123.52 L 242.41 106.45 L 242.28 123.52 L 233.75 123.52 L 233.75 85.93 L 242.28 85.93 L 242.28 101.51 L 252.82 85.93 L 262.99 85.93 L 250.88 104.50 Z M 300.78 121.61 C 297.81 122.89 293.94 123.53 289.19 123.53 C 283.02 123.53 278.12 121.89 274.50 118.61 C 270.88 115.33 269.07 110.96 269.07 105.50 C 269.07 99.75 271.09 95.05 275.14 91.39 C 279.18 87.74 284.39 85.91 290.79 85.91 C 294.75 85.91 298.07 86.36 300.75 87.27 L 297.56 93.46 C 295.66 92.91 293.62 92.63 291.43 92.63 C 287.43 92.63 284.23 93.76 281.83 96.03 C 279.44 98.30 278.24 101.27 278.24 104.93 C 278.24 108.50 279.38 111.38 281.65 113.55 C 283.93 115.72 287.00 116.81 290.88 116.81 C 293.64 116.81 296.22 116.37 298.61 115.47 Z M 342.11 123.56 L 334.54 123.56 L 334.54 93.71 L 320.16 93.71 L 320.16 123.56 L 313.01 123.56 L 313.01 85.93 L 342.11 85.93 Z M 399.66 110.41 L 399.66 123.54 L 391.69 123.54 L 391.69 85.88 L 404.56 85.88 C 413.87 85.88 418.52 89.85 418.52 97.79 C 418.52 101.65 417.12 104.75 414.30 107.07 C 411.50 109.39 407.98 110.51 403.76 110.41 Z M 399.66 92.11 L 399.66 104.27 L 403.11 104.27 C 407.80 104.27 410.14 102.21 410.14 98.11 C 410.14 94.11 407.82 92.11 403.19 92.11 Z M 458.45 93.80 L 447.03 93.80 L 447.03 123.54 L 438.49 123.54 L 438.49 93.80 L 427.09 93.80 L 427.09 85.93 L 458.45 85.93 Z M 812.83 92.66 L 808.33 92.66 C 805.30 92.66 803.28 94.54 803.28 97.86 C 803.28 101.05 804.95 103.47 808.33 103.47 L 812.83 103.47 Z M 801.55 123.56 L 792.64 123.56 L 800.00 107.56 C 796.58 105.36 794.98 102.08 795.07 98.07 C 795.26 89.50 799.61 85.95 808.33 85.95 L 821.05 85.95 L 821.05 123.56 L 812.83 123.56 L 812.83 111.16 L 807.70 111.16 Z M 737.25 123.56 L 728.42 123.56 L 728.42 108.42 L 714.30 108.42 L 714.30 123.56 L 705.45 123.56 L 705.45 85.95 L 714.30 85.95 L 714.30 99.76 L 728.42 99.76 L 728.42 85.95 L 737.25 85.95 Z M 691.05 107.47 L 679.26 107.47 L 679.26 116.84 L 692.95 116.84 L 692.95 123.56 L 670.54 123.56 L 670.54 85.95 L 692.98 85.95 L 692.98 92.66 L 679.26 92.66 L 679.26 100.75 L 691.05 100.75 Z M 620.91 85.95 L 620.91 116.84 L 631.65 116.84 L 631.65 85.95 L 639.67 85.95 L 639.67 116.84 L 650.31 116.84 L 650.31 85.95 L 658.33 85.95 L 658.33 123.56 L 612.87 123.56 L 612.87 85.95 Z M 599.84 123.56 L 590.27 123.56 L 590.27 85.95 L 599.84 85.95 Z M 561.68 103.95 L 566.98 103.95 C 568.77 103.95 569.40 103.43 570.34 102.39 C 571.27 101.35 571.75 100.01 571.75 98.38 C 571.75 96.70 571.28 95.34 570.34 94.27 C 569.41 93.20 568.79 92.66 566.98 92.66 L 561.68 92.66 Z M 561.68 110.67 L 561.68 123.56 L 553.46 123.56 L 553.46 85.95 L 566.98 85.95 C 571.18 85.95 573.78 87.08 576.25 89.36 C 578.71 91.63 579.94 94.62 579.94 98.32 C 579.94 102.03 578.71 105.01 576.25 107.28 C 573.78 109.54 571.18 110.67 566.98 110.67 Z M 522.64 124.09 L 513.07 124.09 L 513.07 86.48 L 522.64 86.48 Z M 218.82 107.68 L 207.04 107.68 L 207.04 116.92 L 220.73 116.92 L 220.73 123.54 L 198.30 123.54 L 198.30 86.48 L 220.75 86.48 L 220.75 93.10 L 207.04 93.10 L 207.04 101.06 L 218.82 101.06 Z M 376.96 107.68 L 365.18 107.68 L 365.18 116.92 L 378.87 116.92 L 378.87 123.54 L 356.45 123.54 L 356.45 86.48 L 378.89 86.48 L 378.89 93.10 L 365.18 93.10 L 365.18 101.06 L 376.96 101.06 Z M 781.67 123.56 L 772.84 123.56 L 772.84 108.42 L 758.72 108.42 L 758.72 123.56 L 749.87 123.56 L 749.87 85.95 L 758.72 85.95 L 758.72 99.76 L 772.84 99.76 L 772.84 85.95 L 781.67 85.95 Z M 500.26 123.56 L 491.42 123.56 L 491.42 108.42 L 477.30 108.42 L 477.30 123.56 L 468.45 123.56 L 468.45 85.95 L 477.30 85.95 L 477.30 99.76 L 491.42 99.76 L 491.42 85.95 L 500.26 85.95 Z M 272.23 59.07 L 263.40 59.07 L 263.40 43.93 L 249.28 43.93 L 249.28 59.07 L 240.43 59.07 L 240.43 21.45 L 249.28 21.45 L 249.28 35.27 L 263.40 35.27 L 263.40 21.45 L 272.23 21.45 Z M 294.56 59.07 L 284.99 59.07 L 284.99 21.45 L 294.56 21.45 Z M 618.10 59.07 L 609.27 59.07 L 609.27 43.93 L 595.14 43.93 L 595.14 59.07 L 586.29 59.07 L 586.29 21.45 L 595.14 21.45 L 595.14 35.27 L 609.27 35.27 L 609.27 21.45 L 618.10 21.45 Z M 640.62 59.07 L 631.05 59.07 L 631.05 21.45 L 640.62 21.45 Z M 365.32 43.21 L 353.54 43.21 L 353.54 52.45 L 367.23 52.45 L 367.23 59.07 L 344.81 59.07 L 344.81 22.00 L 367.25 22.00 L 367.25 28.62 L 353.54 28.62 L 353.54 36.59 L 365.32 36.59 Z M 387.63 45.94 L 387.63 59.07 L 379.66 59.07 L 379.66 21.41 L 392.54 21.41 C 401.84 21.41 406.49 25.38 406.49 33.32 C 406.49 37.18 405.09 40.27 402.28 42.59 C 399.47 44.92 395.96 46.04 391.74 45.94 Z M 387.63 27.63 L 387.63 39.79 L 391.09 39.79 C 395.78 39.79 398.12 37.74 398.12 33.63 C 398.12 29.63 395.79 27.63 391.16 27.63 Z M 446.65 57.13 C 443.68 58.41 439.82 59.05 435.06 59.05 C 428.89 59.05 424.00 57.41 420.37 54.12 C 416.75 50.85 414.94 46.48 414.94 41.01 C 414.94 35.27 416.96 30.57 421.01 26.91 C 425.05 23.26 430.27 21.43 436.66 21.43 C 440.62 21.43 443.94 21.88 446.62 22.79 L 443.43 28.98 C 441.53 28.43 439.49 28.15 437.30 28.15 C 433.30 28.15 430.11 29.28 427.70 31.54 C 425.31 33.82 424.11 36.79 424.11 40.45 C 424.11 44.02 425.25 46.89 427.52 49.07 C 429.80 51.24 432.88 52.33 436.75 52.33 C 439.52 52.33 442.09 51.88 444.48 50.98 Z M 548.55 59.07 L 548.55 21.40 L 557.31 21.40 L 557.31 33.52 L 562.30 33.52 C 571.25 33.52 575.72 38.66 575.72 46.01 C 575.72 49.86 574.50 53.61 572.09 55.80 C 569.68 57.98 566.28 59.07 561.91 59.07 Z M 557.31 41.12 L 557.31 52.89 L 560.69 52.89 C 565.09 52.89 567.28 50.28 567.28 46.54 C 567.28 42.93 565.12 41.12 560.81 41.12 Z M 468.75 51.11 L 466.17 59.08 L 455.22 59.08 L 469.87 21.41 C 473.21 21.41 476.56 21.41 479.91 21.41 L 494.56 59.08 L 483.61 59.08 L 481.03 51.11 C 476.94 51.11 472.84 51.11 468.75 51.11 Z M 473.95 33.71 L 470.07 43.43 C 473.29 43.43 476.49 43.43 479.70 43.43 L 475.83 33.71 C 475.20 33.71 474.58 33.71 473.95 33.71 Z M 535.98 59.12 L 527.45 59.12 L 527.45 29.66 L 518.28 29.66 C 518.27 33.15 518.36 37.29 518.28 41.39 C 518.05 53.03 513.16 60.30 501.22 58.79 L 501.22 50.82 C 507.54 51.24 509.89 47.10 509.93 41.30 L 510.09 21.47 L 535.98 21.47 Z M 535.98 59.12"/>
+  </symbol>
+  <symbol id="uer-mark" viewBox="0 0 132.39 131.91">
+    <path fill="currentColor" fill-rule="evenodd" d="M 37.24 74.20 L 112.70 74.20 L 112.70 20.17 L 20.17 20.17 L 20.17 111.73 L 95.63 111.73 L 95.63 131.91 L 0.00 131.91 L 0.00 0.00 L 132.39 0.00 L 132.39 94.37 L 37.24 94.37 Z M 37.24 36.57 L 95.44 36.57 L 95.44 56.74 L 37.24 56.74 Z M 37.24 36.57"/>
+  </symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <div class="hdr-bar">
+      <a href="#top" class="logo" aria-label="Універсальні експертні рішення — на початок">
+        <svg class="lock" viewBox="0 0 821.05 131.91" role="img" aria-label="Універсальні експертні рішення"><use href="#uer-lockup"/></svg>
+        <svg class="mark-only" viewBox="0 0 132.39 131.91" role="img" aria-label="Універсальні експертні рішення"><use href="#uer-mark"/></svg>
+      </a>
+      <nav class="nav">
+        <a href="#pro">Про компанію</a>
+        <a href="#dozvoly">Дозволи</a>
+        <a href="#poslugy">Послуги</a>
+        <a href="#robota">Як працюємо</a>
+        <a href="#kontakty">Контакти</a>
+      </nav>
+      <a class="hdr-cta" href="#zayavka">Залишити заявку</a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="drawer" id="drawer">
+      <a href="#pro">Про компанію</a>
+      <a href="#dozvoly">Дозволи Держпраці</a>
+      <a href="#poslugy">Послуги</a>
+      <a href="#robota">Як ми працюємо</a>
+      <a href="#kontakty">Контакти</a>
+      <div class="dl">
+        <a class="btn btn--red" href="#zayavka">Залишити заявку</a>
+        <a class="btn btn--out" href="tel:+380669930164">Зателефонувати</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+
+    <div>
+      <span class="chip"><s></s> 4 чинних дозволи Держпраці</span>
+      <h1>Наші експертні рішення&nbsp;— <em>ваша безпека</em></h1>
+      <p class="sub">
+        Навчання, експертиза, технічне діагностування та дозвільна документація
+        у сфері охорони праці й промислової безпеки. Від навчання персоналу
+        до <b>висновку експертизи</b> для вашого підприємства.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--wht" href="#zayavka">Залишити заявку</a>
+        <a class="btn btn--glass" href="tel:+380669930164">+38 066 993 0164</a>
+      </div>
+    </div>
+
+    <!-- photo / schematic carousel -->
+    <div class="gal" id="gal" aria-roledescription="карусель" aria-label="Фотографії робіт компанії">
+      <div class="gal-stage" id="galStage">
+
+        <figure class="slide on">
+          <img src="img/tekhnichnyi-ohliad-krana.jpg" alt="Фахівець ТОВ «УЕР» проводить технічний огляд автомобільного крана" width="1280" height="853" loading="eager">
+          <figcaption class="cap">Технічний огляд і експертне обстеження вантажопідіймальних кранів</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/ekspertne-obstezhennia-navantazhuvacha.jpg" alt="Фахівець ТОВ «УЕР» обстежує вилковий навантажувач на майданчику" width="960" height="1024" loading="lazy">
+          <figcaption class="cap">Експертне обстеження навантажувачів і технологічних транспортних засобів</figcaption>
+        </figure>
+
+        <figure class="slide slide--svg">
+          <svg viewBox="0 0 520 330" role="img" aria-label="Схематичне зображення посудини, що працює під тиском, з розмірними лініями">
+            <defs>
+              <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#402A2E"/>
+                <stop offset=".5" stop-color="#2A171B"/>
+                <stop offset="1" stop-color="#1B0D10"/>
+              </linearGradient>
+              <linearGradient id="cap" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#4B3035"/>
+                <stop offset="1" stop-color="#2C181C"/>
+              </linearGradient>
+            </defs>
+
+            <g stroke="#7A575C" stroke-width="1" fill="none" class="dash" opacity=".55">
+              <line x1="96" y1="52" x2="96" y2="104"/>
+              <line x1="424" y1="52" x2="424" y2="104"/>
+              <line x1="96" y1="226" x2="96" y2="286"/>
+              <line x1="424" y1="226" x2="424" y2="286"/>
+            </g>
+
+            <g stroke="#A9868B" stroke-width="1.2" fill="none">
+              <line x1="96" y1="62" x2="424" y2="62"/>
+              <path d="M96 62l8-4v8zM424 62l-8-4v8" fill="#A9868B" stroke="none"/>
+            </g>
+            <text x="260" y="52" fill="#C9AAAE" font-family="Roboto Mono, monospace" font-size="12" text-anchor="middle">L</text>
+
+            <g fill="#331E22" stroke="#5B3B41" stroke-width="1.2">
+              <path d="M126 226h58l10 26h-78z"/>
+              <path d="M336 226h58l10 26h-78z"/>
+            </g>
+            <line x1="70" y1="252" x2="450" y2="252" stroke="#5B3B41" stroke-width="2"/>
+            <g stroke="#44272C" stroke-width="1.5">
+              <line x1="82" y1="252" x2="70" y2="264"/><line x1="112" y1="252" x2="100" y2="264"/>
+              <line x1="142" y1="252" x2="130" y2="264"/><line x1="172" y1="252" x2="160" y2="264"/>
+              <line x1="202" y1="252" x2="190" y2="264"/><line x1="232" y1="252" x2="220" y2="264"/>
+              <line x1="262" y1="252" x2="250" y2="264"/><line x1="292" y1="252" x2="280" y2="264"/>
+              <line x1="322" y1="252" x2="310" y2="264"/><line x1="352" y1="252" x2="340" y2="264"/>
+              <line x1="382" y1="252" x2="370" y2="264"/><line x1="412" y1="252" x2="400" y2="264"/>
+              <line x1="442" y1="252" x2="430" y2="264"/>
+            </g>
+
+            <rect x="96" y="104" width="328" height="122" fill="url(#shell)" stroke="#6B4850" stroke-width="1.6"/>
+            <path d="M96 104a34 61 0 0 0 0 122z" fill="url(#cap)" stroke="#6B4850" stroke-width="1.6"/>
+            <path d="M424 104a34 61 0 0 1 0 122z" fill="url(#cap)" stroke="#6B4850" stroke-width="1.6"/>
+            <ellipse cx="96" cy="165" rx="12" ry="61" fill="none" stroke="#5B3B41" stroke-width="1.2" class="dash"/>
+
+            <g stroke="#5B3B41" stroke-width="1.2" class="dash">
+              <line x1="205" y1="104" x2="205" y2="226"/>
+              <line x1="315" y1="104" x2="315" y2="226"/>
+            </g>
+            <line x1="52" y1="165" x2="468" y2="165" stroke="#7A575C" stroke-width="1" stroke-dasharray="14 4 3 4" opacity=".6"/>
+
+            <g fill="#402A2E" stroke="#6B4850" stroke-width="1.4">
+              <rect x="146" y="80" width="26" height="26"/><rect x="140" y="72" width="38" height="9"/>
+              <rect x="348" y="80" width="26" height="26"/><rect x="342" y="72" width="38" height="9"/>
+            </g>
+
+            <circle cx="260" cy="165" r="30" fill="#1E0F12" stroke="#6B4850" stroke-width="1.6"/>
+            <circle cx="260" cy="165" r="22" fill="none" stroke="#5B3B41" stroke-width="1.2"/>
+            <g fill="#7A575C">
+              <circle cx="260" cy="139" r="2.4"/><circle cx="278" cy="147" r="2.4"/>
+              <circle cx="286" cy="165" r="2.4"/><circle cx="278" cy="183" r="2.4"/>
+              <circle cx="260" cy="191" r="2.4"/><circle cx="242" cy="183" r="2.4"/>
+              <circle cx="234" cy="165" r="2.4"/><circle cx="242" cy="147" r="2.4"/>
+            </g>
+
+            <g transform="translate(378,52)">
+              <line x1="0" y1="28" x2="0" y2="20" stroke="#6B4850" stroke-width="2"/>
+              <circle cx="0" cy="0" r="20" fill="#1B0D10" stroke="#CA2026" stroke-width="2"/>
+              <path d="M-12 6a13 13 0 0 1 24 0" fill="none" stroke="#6B4850" stroke-width="1.4"/>
+              <line x1="0" y1="4" x2="8" y2="-7" stroke="#FF5A61" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="0" cy="4" r="2.4" fill="#FF5A61"/>
+            </g>
+
+            <g stroke="#CA2026" stroke-width="1.3" fill="none"><path d="M282 143l30-30h56"/></g>
+            <circle cx="282" cy="143" r="3.2" fill="#CA2026"/>
+            <text x="374" y="110" fill="#FF5A61" font-family="Roboto Mono, monospace" font-size="11.5" letter-spacing=".08em">ОГЛЯД</text>
+
+            <g stroke="#CA2026" stroke-width="1.3" fill="none"><path d="M205 214l-34 34h-62"/></g>
+            <circle cx="205" cy="214" r="3.2" fill="#CA2026"/>
+            <text x="42" y="252" fill="#FF5A61" font-family="Roboto Mono, monospace" font-size="11.5" letter-spacing=".08em">ШОВ</text>
+
+            <g stroke="#A9868B" stroke-width="1.2" fill="none">
+              <line x1="468" y1="104" x2="468" y2="226"/>
+              <path d="M468 104l-4 8h8zM468 226l-4-8h8" fill="#A9868B" stroke="none"/>
+            </g>
+            <text x="482" y="169" fill="#C9AAAE" font-family="Roboto Mono, monospace" font-size="12">D</text>
+
+            <line x1="96" y1="286" x2="424" y2="286" stroke="#44272C" stroke-width="1"/>
+            <text x="96" y="308" fill="#8E6B70" font-family="Roboto Mono, monospace" font-size="11" letter-spacing=".1em">НПАОП 0.00-1.81-18</text>
+            <text x="424" y="308" fill="#8E6B70" font-family="Roboto Mono, monospace" font-size="11" letter-spacing=".1em" text-anchor="end">ТЕХНІЧНЕ ДІАГНОСТУВАННЯ</text>
+          </svg>
+          <figcaption class="cap">Посудина, що працює під тиском — об'єкт експертного обстеження</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/tekhnichne-diahnostuvannia-shema.jpg" alt="Схеми технічного діагностування мостового крана та вилкового навантажувача" width="1280" height="981" loading="lazy">
+          <figcaption class="cap">Технічне діагностування: кран мостовий і навантажувач вилковий</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/navchannia-z-okhorony-pratsi.jpg" alt="Заняття з питань охорони праці для працівників підприємства" width="1280" height="853" loading="lazy">
+          <figcaption class="cap">Навчання та перевірка знань з питань охорони праці</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="gal-ui">
+        <div class="gal-dots" id="galDots"></div>
+        <button class="gal-arw" id="galPrev" aria-label="Попереднє фото"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button class="gal-arw" id="galNext" aria-label="Наступне фото"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ DIRECTIONS BAND ============ -->
+<div class="band">
+  <div class="wrap band-in">
+    <a class="dcard rv" href="#poslugy" data-open="0">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4 6v6c0 5 3.4 8.5 8 9.5 4.6-1 8-4.5 8-9.5V6l-8-3.5Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+      <b>Навчання з питань охорони праці та пожежної безпеки</b>
+    </a>
+    <a class="dcard rv" href="#poslugy" data-open="1">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18.5v-2.2a8.5 8.5 0 0 1 17 0v2.2Z"/><path d="M9.5 8.4V4.2h5v4.2M2 18.5h20"/></svg></span>
+      <b>Експертне обстеження та технічне діагностування</b>
+      <span>Експертиза проектної документації</span>
+    </a>
+    <a class="dcard rv" href="#poslugy" data-open="4">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4.5 4.5v14.5H6Z"/><path d="M14 2.5V7h4.5M9 12h6M9 16h4"/></svg></span>
+      <b>Аудит стану охорони праці</b>
+    </a>
+    <a class="dcard rv" href="#poslugy" data-open="0">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M9 9.5V20"/></svg></span>
+      <b>Атестація робочих місць</b>
+    </a>
+    <a class="dcard rv" href="#poslugy" data-open="2">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6 2.6 20h18.8L12 3.6Z"/><path d="M12 10v4.2M12 17.2h.01"/></svg></span>
+      <b>Консультації щодо порядку розслідування нещасних випадків</b>
+    </a>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="pro">
+  <div class="wrap two">
+    <div class="prose rv">
+      <span class="eyebrow">Про компанію</span>
+      <h2 class="h2">Дипломовані спеціалісти<br>з профільною освітою</h2>
+      <p style="margin-top:24px">
+        <b>ТОВ «Універсальні експертні рішення»</b> — експертна організація у сфері
+        охорони праці та промислової безпеки з Івано-Франківська. Ми працюємо
+        з підприємствами, які виконують роботи підвищеної небезпеки або
+        експлуатують обладнання підвищеної небезпеки.
+      </p>
+      <p>
+        Компанія має чинні дозволи Держпраці на виконання робіт підвищеної небезпеки
+        та на експлуатацію обладнання підвищеної небезпеки. Це дає нам право проводити
+        навчання з питань охорони праці, технічний огляд і експертне обстеження
+        обладнання, а також складати Висновок експертизи, необхідний підприємству
+        для отримання власного дозволу Держпраці.
+      </p>
+      <p>
+        До складу нашої команди входять висококваліфіковані дипломовані спеціалісти
+        з профільною освітою та досвідом роботи у напрямку охорони праці
+        та промислової безпеки.
+      </p>
+      <p>
+        Ми ведемо замовника через увесь процес: від визначення переліку необхідних
+        документів до передачі готового висновку, паспорта чи посвідчення.
+        Екзамен після навчання можна скласти дистанційно <b>по ZOOM</b> —
+        за бажанням замовника.
+      </p>
+
+      <ul class="facts">
+        <li>Код ЄДРПОУ<b>42091488</b></li>
+        <li>Директор<b>Яна Мегеда</b></li>
+        <li>Місто<b>Івано-Франківськ</b></li>
+      </ul>
+
+      <div class="free">
+        <b>Консультації безкоштовно</b>
+        <span><a href="tel:+380687215510">+38 068 721 5510</a> · Андрій Жданюк</span>
+      </div>
+    </div>
+
+    <div class="rv">
+      <span class="eyebrow">Принципи роботи</span>
+      <div class="pr-list" style="margin-top:22px">
+        <div class="pr"><i>01</i><div><b>Професіоналізм</b><p>Профільна освіта та практичний досвід у кожному напрямку.</p></div></div>
+        <div class="pr"><i>02</i><div><b>Точність</b><p>Робота строго в межах чинних НПАОП і вимог Держпраці.</p></div></div>
+        <div class="pr"><i>03</i><div><b>Відповідальність</b><p>Відповідаємо за кожен виданий висновок і документ.</p></div></div>
+        <div class="pr"><i>04</i><div><b>Довіра</b><p>Прозорі умови та зрозуміла вартість робіт від початку.</p></div></div>
+        <div class="pr"><i>05</i><div><b>Розвиток</b><p>Оновлюємо компетенції разом зі змінами в законодавстві.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERMITS ============ -->
+<section class="sec sec--dark" id="dozvoly" style="padding:74px 0">
+  <div class="wrap">
+    <div class="pwrap rv" id="pwrap">
+      <button class="ptog" id="ptog" aria-expanded="false" aria-controls="plist">
+        <span class="pt">Чинні дозволи Держпраці</span>
+        <span class="pn">4 документи</span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <div class="plist" id="plist">
+        <div class="plist-in">
+          <div class="prow">
+            <span class="kn">Дозвіл на виконання робіт підвищеної небезпеки</span>
+            <span class="no">№ ДЗ-2480/ПЗ/1-23</span>
+            <span class="dt">від 19.06.2023 р.</span>
+          </div>
+          <div class="prow">
+            <span class="kn">Дозвіл на експлуатацію обладнання підвищеної небезпеки</span>
+            <span class="no">№ ДЗ-2481/ПЗ/1-23</span>
+            <span class="dt">від 19.06.2023 р.</span>
+          </div>
+          <div class="prow">
+            <span class="kn">Дозвіл на виконання робіт підвищеної небезпеки</span>
+            <span class="no">№ ДЗ-3577/ПЗ/1-23</span>
+            <span class="dt">від 17.08.2023 р.</span>
+          </div>
+          <div class="prow">
+            <span class="kn">Дозвіл на виконання робіт підвищеної небезпеки</span>
+            <span class="no">№ ДЗ-2515/ПЗ/3.2-26</span>
+            <span class="dt">від 23.07.2026 р.</span>
+          </div>
+          <p class="fin">Копії дозволів надаємо на запит разом із комерційною пропозицією.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="poslugy">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Послуги</span>
+      <h2 class="h2">Шість напрямків роботи</h2>
+      <p class="lede">Натисніть на напрямок, щоб розгорнути перелік послуг і нормативну базу.</p>
+    </div>
+
+    <div class="acc rv" id="acc">
+
+      <div class="item open">
+        <button class="abtn" aria-expanded="true">
+          <span class="n">01</span>
+          <span class="t">Навчання та експертиза з питань охорони праці</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p>Навчання посадових осіб і працівників за всіма НПАОП, що діють в межах України, та експертиза стану охорони праці на підприємстві.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Навчання з питань охорони праці</b> — за всіма НПАОП, пожежна безпека, електробезпека, робітничі професії</li>
+              <li><b>Лекції зі спеціальних Правил безпеки</b> — галузеві, тривалість 1 година</li>
+              <li><b>Спеціальне навчання</b> для осіб, які виконують роботи підвищеної небезпеки</li>
+              <li><b>Професійне навчання працівників</b></li>
+            </ul>
+            <ul>
+              <li><b>Навчання на присвоєння групи</b> з електробезпеки</li>
+              <li><b>Експертиза з питань охорони праці</b> — зі складанням Висновку експертизи для Дозволу Держпраці</li>
+              <li><b>Атестація робочих місць</b> за умовами праці</li>
+              <li><b>Декларація відповідності</b> матеріально-технічної бази — підготовка до реєстрації</li>
+            </ul>
+          </div>
+          <span class="tag">Екзамен по ZOOM — за бажанням замовника</span>
+          <div class="norm">
+            <h4>Нормативна база</h4>
+            <p>Закон України «Про охорону праці» (ст. 13, 15, 16, 18, 42) · Типове положення про порядок проведення навчання і перевірки знань з питань охорони праці та Перелік робіт з підвищеною небезпекою (додаток 3, п. 5.1, 5.3, 5.6; розділ 4) · Довідник кваліфікаційних характеристик професій працівників (ДКХП), професійні стандарти, Класифікатор професій ДК 003 · Постанова КМУ № 442 від 01.08.1992 «Про Порядок проведення атестації робочих місць за умовами праці», Кодекс законів про працю · Порядок видачі дозволів, Постанова КМУ № 1107.</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">02</span>
+          <span class="t">Експертне обстеження та технічне діагностування</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p>Огляд, випробування та експертне обстеження машин, механізмів і устатковання підвищеної небезпеки.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Частковий технічний огляд</b></li>
+              <li><b>Повний технічний огляд</b></li>
+              <li><b>Експертне обстеження</b> (технічне діагностування)</li>
+              <li><b>Паспортизація</b> обладнання, машин та механізмів</li>
+            </ul>
+            <ul>
+              <li>Вантажопідіймальні крани та механізми</li>
+              <li>Ліфти</li>
+              <li>Технологічні транспортні засоби, навантажувачі</li>
+              <li>Обладнання, що працює під тиском</li>
+              <li>Устатковання напругою понад 1000 В</li>
+            </ul>
+          </div>
+          <div class="norm">
+            <h4>Нормативна база</h4>
+            <p>Закон України «Про охорону праці» · Постанова КМУ № 687 «Про затвердження Порядку проведення огляду, випробування та експертного обстеження (технічного діагностування) машин, механізмів, устатковання підвищеної небезпеки» (НПАОП 0.00-6.18-04) · НПАОП 0.00-1.83-18 «Правила охорони праці під час експлуатації навантажувачів» · НПАОП 0.00-1.81-18 «Правила охорони праці під час експлуатації обладнання, що працює під тиском» · НПАОП 0.00-1.80-18 «Правила охорони праці під час експлуатації вантажопідіймальних кранів, підіймальних пристроїв і відповідного обладнання».</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">03</span>
+          <span class="t">Нещасні випадки на виробництві</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p>Консультації та повний супровід розслідування нещасних випадків на виробництві — від моменту події до оформлення матеріалів розслідування.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Консультації</b> щодо порядку дій після нещасного випадку</li>
+              <li><b>Супровід розслідування</b> та участь у роботі комісії</li>
+            </ul>
+            <ul>
+              <li><b>Підготовка документів</b> за результатами розслідування</li>
+              <li><b>Взаємодія з Держпраці</b> у ході розслідування</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">04</span>
+          <span class="t">Експертиза проектної документації</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p>Експертиза проектів на відповідність вимогам законодавства про охорону праці — з профільним досвідом у нафтогазовидобувній галузі.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Будівництво (буріння) свердловин</b></li>
+              <li><b>Облаштування свердловин</b></li>
+              <li><b>Проекти промислової розробки</b></li>
+            </ul>
+            <ul>
+              <li><b>Експертиза проектів будівництва</b> — проектування</li>
+              <li><b>Технічна інвентаризація</b></li>
+            </ul>
+          </div>
+          <div class="norm">
+            <h4>Нормативна база</h4>
+            <p>Стаття 21 Закону України «Про охорону праці» — додержання вимог щодо охорони праці під час проектування, будівництва (виготовлення) та реконструкції підприємств, об'єктів і засобів виробництва · Гірничий закон України · Кодекс України «Про надра» · НПАОП 11.1-1.16-23 «Правила безпеки в нафтогазодобувній промисловості» · НПАОП 1.121-1.18-82 «Єдині технічні правила ведення робіт при будівництві свердловин на нафтових, газових і газоконденсатних родовищах» · ОСТ 39.158-85 «Буріння нафтових і газових свердловин. Загальні вимоги безпеки» · ДБН А.3.2-2-2009 «Охорона праці і промислова безпека у будівництві» · ВНТП 01-85 «Норми технологічного проектування об'єктів газовидобувного підприємства і станцій підземного зберігання газу».</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">05</span>
+          <span class="t">Аудит стану охорони праці</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p style="max-width:80ch">Незалежна оцінка стану охорони праці на підприємстві: перевірка документації, фактичного стану робочих місць та відповідності вимогам НПАОП — з переліком виявлених невідповідностей і рекомендаціями щодо їх усунення.</p>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">06</span>
+          <span class="t">Інші послуги</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <p>Дозвільна документація, розроблення планів і супутні роботи у сфері промислової та техногенної безпеки.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Психофізіологічна експертиза</b> працівників (ПФЕ)</li>
+              <li><b>ПЛАН управління відходами</b> підприємства</li>
+              <li><b>ПЛАН локалізації і ліквідації аварій</b> та їх наслідків</li>
+              <li><b>Ідентифікація</b> об'єктів підвищеної небезпеки</li>
+              <li><b>Документація та сертифікати ISO</b></li>
+            </ul>
+            <ul>
+              <li><b>Заміри опору ізоляції</b> та заземлення</li>
+              <li><b>Медичні огляди</b> працівників — організація та супровід</li>
+              <li><b>Пожежна, охоронна та техногенна безпека</b> — проектування, монтаж, обслуговування</li>
+              <li><b>Технічне обслуговування вогнегасників</b></li>
+            </ul>
+          </div>
+          <div class="norm">
+            <h4>Нормативна база</h4>
+            <p>Закон України «Про охорону праці» · Наказ МОЗ України № 246 (та оновлений № 1393) — психофізіологічна експертиза · Закон України «Про управління відходами», Порядок розроблення планів · Закон України «Про об'єкти підвищеної небезпеки» · Закон України «Про стандартизацію» та національні стандарти ДСТУ ISO.</p>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="sec" id="robota" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Порядок роботи</span>
+      <h2 class="h2">Як ми працюємо</h2>
+    </div>
+    <div class="flow rv">
+      <div class="fst"><span class="n">01</span><b>Звернення</b><p>Залишаєте заявку на сайті, телефонуєте або пишете на пошту.</p></div>
+      <div class="fst"><span class="n">02</span><b>Безкоштовна консультація</b><p>Визначаємо перелік робіт і документів, які потрібні саме вам.</p></div>
+      <div class="fst"><span class="n">03</span><b>Договір і розрахунок</b><p>Узгоджуємо вартість, строки та підписуємо договір.</p></div>
+      <div class="fst"><span class="n">04</span><b>Виконання робіт</b><p>Обстеження, навчання або експертиза — залежно від напрямку.</p></div>
+      <div class="fst"><span class="n">05</span><b>Видача документів</b><p>Передаємо висновок експертизи, паспорт, посвідчення чи звіт.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="darkband">
+<!-- ============ APPLICATION FORM ============ -->
+<section class="sec sec--dark" id="zayavka">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fside rv">
+        <span class="eyebrow">Заявка</span>
+        <h2 class="h2">Залишити заявку</h2>
+        <p style="margin-top:18px">
+          Заповніть форму — ми зв'яжемося з вами, уточнимо обсяг робіт
+          і надішлемо комерційну пропозицію. Консультація безкоштовна.
+        </p>
+        <ul>
+          <li>Відповідаємо в робочі години</li>
+          <li>Уточнюємо перелік необхідних документів</li>
+          <li>Надсилаємо розрахунок вартості</li>
+        </ul>
+        <p style="margin-top:24px;font-size:15px">
+          Не зручно заповнювати форму? Телефонуйте:
+          <a href="tel:+380669930164" style="font-family:var(--f-mono);font-weight:700;color:#fff;text-decoration:none">+38 066 993 0164</a>
+        </p>
+      </div>
+
+      <div class="fcard rv">
+        <form id="zform" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label>Не заповнюйте це поле <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <label class="fld" id="f-service">
+            <span>Послуга <i>*</i></span>
+            <select name="Послуга" required>
+              <option value="">— оберіть послугу —</option>
+              <option>Навчання з питань охорони праці та пожежної безпеки</option>
+              <option>Навчання на присвоєння групи з електробезпеки</option>
+              <option>Спеціальне навчання (роботи підвищеної небезпеки)</option>
+              <option>Професійне навчання працівників</option>
+              <option>Технічний огляд обладнання</option>
+              <option>Експертне обстеження (технічне діагностування) обладнання</option>
+              <option>Виготовлення паспорта обладнання</option>
+              <option>Експертиза стану охорони праці (для Дозволу Держпраці)</option>
+              <option>Декларація відповідності матеріально-технічної бази</option>
+              <option>Експертиза проектної документації</option>
+              <option>Аудит стану охорони праці</option>
+              <option>Атестація робочих місць</option>
+              <option>Психофізіологічна експертиза (ПФЕ)</option>
+              <option>Розслідування нещасного випадку — консультація</option>
+              <option>Інше / потрібна консультація</option>
+            </select>
+            <span class="err">Оберіть послугу зі списку.</span>
+          </label>
+
+          <div class="frow">
+            <label class="fld" id="f-name">
+              <span>Контактна особа <i>*</i></span>
+              <input type="text" name="Контактна особа" autocomplete="name" required>
+              <span class="err">Вкажіть ім'я та прізвище.</span>
+            </label>
+            <label class="fld">
+              <span>Підприємство</span>
+              <input type="text" name="Підприємство" autocomplete="organization">
+            </label>
+          </div>
+
+          <div class="frow">
+            <label class="fld" id="f-phone">
+              <span>Телефон <i>*</i></span>
+              <input type="tel" name="Телефон" inputmode="tel" autocomplete="tel" placeholder="+38 0__ ___ __ __" required>
+              <span class="err">Вкажіть телефон для зв'язку.</span>
+            </label>
+            <label class="fld" id="f-email">
+              <span>Електронна пошта <i>*</i></span>
+              <input type="email" name="Електронна пошта" autocomplete="email" placeholder="name@company.ua" required>
+              <span class="err">Перевірте адресу пошти.</span>
+            </label>
+          </div>
+
+          <div class="frow">
+            <label class="fld">
+              <span>Кількість осіб</span>
+              <input type="number" name="Кількість осіб" min="1" max="999" placeholder="для навчання">
+            </label>
+            <label class="fld">
+              <span>Місто / адреса об'єкта</span>
+              <input type="text" name="Місто або адреса об'єкта">
+            </label>
+          </div>
+
+          <label class="fld">
+            <span>Деталі заявки</span>
+            <textarea name="Деталі заявки" placeholder="Тип обладнання, кількість одиниць, строки, курс навчання тощо"></textarea>
+          </label>
+
+          <label class="chk" id="f-consent">
+            <input type="checkbox" name="Згода на обробку даних" value="так" required>
+            <span>Я даю згоду на обробку моїх персональних даних для опрацювання заявки. <i style="font-style:normal;color:var(--red)">*</i></span>
+          </label>
+
+          <div class="fsub">
+            <button type="submit" class="btn btn--red" id="zbtn">Відправити заявку</button>
+            <span class="fnote">Поля з <i style="font-style:normal;color:var(--red)">*</i> обов'язкові.</span>
+          </div>
+
+          <div class="fmsg" id="fmsg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTS ============ -->
+<section class="sec sec--dark" id="kontakty" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">Контакти</span>
+      <h2 class="h2">Зв'яжіться з нами</h2>
+      <p class="lede">
+        Консультації — безкоштовно. Зателефонуйте або напишіть, і ми підкажемо,
+        які саме документи та роботи потрібні вашому підприємству.
+      </p>
+    </div>
+
+    <div class="cgrid rv">
+      <div class="cbox">
+        <div class="crow">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10.4" r="2.6"/></svg></span>
+          <div><span class="lb">Адреса</span>76006, м. Івано-Франківськ,<br>вул. Вовчинецька, 192, офіс 5</div>
+        </div>
+        <div class="crow">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16.9v2.6a1.7 1.7 0 0 1-1.9 1.7 17 17 0 0 1-7.4-2.6 16.7 16.7 0 0 1-5.1-5.1A17 17 0 0 1 4 6.1 1.7 1.7 0 0 1 5.7 4.2h2.6a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.6.6 2.4a1.7 1.7 0 0 1-.4 1.8l-1.1 1.1a13.7 13.7 0 0 0 5.1 5.1l1.1-1.1a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.4.6A1.7 1.7 0 0 1 21 16.9Z"/></svg></span>
+          <div>
+            <span class="lb">Телефони</span>
+            <a href="tel:+380669930164" class="mono">+38 066 993 0164</a>
+            <a href="tel:+380687215510" class="mono" style="margin-top:7px">+38 068 721 5510</a>
+            <span class="who">Андрій Жданюк — консультації</span>
+          </div>
+        </div>
+        <div class="crow">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="1.6"/><path d="m3.4 6 8.6 6.4L20.6 6"/></svg></span>
+          <div><span class="lb">Пошта</span><a href="mailto:u-e-r@ukr.net" class="mono">u-e-r@ukr.net</a></div>
+        </div>
+        <div class="crow">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.6" r="3.6"/><path d="M4.6 20.4a7.4 7.4 0 0 1 14.8 0"/></svg></span>
+          <div><span class="lb">Керівництво</span>Яна Мегеда<span class="who"> — директор ТОВ «УЕР»</span></div>
+        </div>
+        <div style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn--wht" href="#zayavka">Залишити заявку</a>
+          <a class="btn btn--glass" href="mailto:u-e-r@ukr.net">Написати на пошту</a>
+        </div>
+      </div>
+
+      <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%D0%86%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%2C%20%D0%B2%D1%83%D0%BB.%20%D0%92%D0%BE%D0%B2%D1%87%D0%B8%D0%BD%D0%B5%D1%86%D1%8C%D0%BA%D0%B0%2C%20192&hl=uk&z=16&output=embed"
+        title="Карта: Івано-Франківськ, вул. Вовчинецька, 192"></iframe>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <a href="#top" class="logo" aria-label="На початок">
+          <svg class="lock" viewBox="0 0 821.05 131.91" role="img" aria-label="Універсальні експертні рішення"><use href="#uer-lockup"/></svg>
+        </a>
+        <p class="ftr-tag">Товариство з обмеженою відповідальністю «Універсальні експертні рішення». Охорона праці та промислова безпека.</p>
+      </div>
+      <div class="fnav">
+        <div class="fcol">
+          <h4>Компанія</h4>
+          <a href="#pro">Про компанію</a>
+          <a href="#dozvoly">Дозволи</a>
+          <a href="#robota">Як ми працюємо</a>
+        </div>
+        <div class="fcol">
+          <h4>Послуги</h4>
+          <a href="#poslugy">Усі напрямки</a>
+          <a href="#zayavka">Залишити заявку</a>
+        </div>
+        <div class="fcol">
+          <h4>Контакти</h4>
+          <a href="tel:+380669930164">+38 066 993 0164</a>
+          <a href="tel:+380687215510">+38 068 721 5510</a>
+          <a href="mailto:u-e-r@ukr.net">u-e-r@ukr.net</a>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-bot">
+      <span>© <span id="yr">2026</span> ТОВ «Універсальні експертні рішення»</span>
+      <span>76006, м. Івано-Франківськ, вул. Вовчинецька, 192, офіс 5</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ================================================================
+     WEB3FORMS ACCESS KEY — вставити ключ між лапками нижче.
+     Ключ береться в кабінеті web3forms.com і прив'язується до
+     поштової скриньки, на яку приходитимуть заявки.
+     Поки поле порожнє, форма показує повідомлення й не відправляється.
+     ================================================================ */
+  var WEB3FORMS_KEY = "";
+  var MAIL_SUBJECT  = "Нова заявка з сайту УЕР";
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- header state ---- */
+  var hdr=document.getElementById('hdr');
+  function state(){ hdr.classList.toggle('on', window.scrollY>40); }
+  state();
+  window.addEventListener('scroll',state,{passive:true});
+
+  /* ---- mobile drawer ---- */
+  var burger=document.getElementById('burger'), drawer=document.getElementById('drawer');
+  burger.addEventListener('click',function(){
+    var o=drawer.classList.toggle('show');
+    burger.classList.toggle('x',o);
+    burger.setAttribute('aria-expanded',o?'true':'false');
+  });
+  drawer.addEventListener('click',function(e){
+    if(e.target.closest('a')){
+      drawer.classList.remove('show');
+      burger.classList.remove('x');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---- carousel: auto + manual ---- */
+  var stage=document.getElementById('galStage');
+  if(stage){
+    var slides=[].slice.call(stage.querySelectorAll('.slide'));
+    var dotsBox=document.getElementById('galDots');
+    var cur=0, timer=null, DELAY=6000;
+
+    slides.forEach(function(s,i){
+      var d=document.createElement('button');
+      d.type='button';
+      d.setAttribute('aria-label','Фото '+(i+1)+' з '+slides.length);
+      if(i===0) d.className='on';
+      d.addEventListener('click',function(){ go(i); restart(); });
+      dotsBox.appendChild(d);
+    });
+    var dots=[].slice.call(dotsBox.children);
+
+    function go(n){
+      cur=(n+slides.length)%slides.length;
+      slides.forEach(function(s,i){ s.classList.toggle('on', i===cur); });
+      dots.forEach(function(d,i){ d.classList.toggle('on', i===cur); });
+    }
+    function next(){ go(cur+1); }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+    function start(){ if(!reduce && !timer) timer=setInterval(next,DELAY); }
+    function restart(){ stop(); start(); }
+
+    document.getElementById('galNext').addEventListener('click',function(){ next(); restart(); });
+    document.getElementById('galPrev').addEventListener('click',function(){ go(cur-1); restart(); });
+
+    var gal=document.getElementById('gal');
+    gal.addEventListener('mouseenter',stop);
+    gal.addEventListener('mouseleave',start);
+    gal.addEventListener('focusin',stop);
+    gal.addEventListener('focusout',start);
+    document.addEventListener('visibilitychange',function(){ document.hidden?stop():start(); });
+    start();
+  }
+
+  /* ---- permits toggle ---- */
+  var pwrap=document.getElementById('pwrap'), ptog=document.getElementById('ptog'), plist=document.getElementById('plist');
+  if(ptog){
+    ptog.addEventListener('click',function(){
+      var open=!pwrap.classList.contains('open');
+      pwrap.classList.toggle('open',open);
+      ptog.setAttribute('aria-expanded',open?'true':'false');
+      plist.style.height = open ? plist.firstElementChild.offsetHeight+'px' : '0px';
+    });
+    window.addEventListener('resize',function(){
+      if(pwrap.classList.contains('open')) plist.style.height=plist.firstElementChild.offsetHeight+'px';
+    });
+  }
+
+  /* ---- services accordion ---- */
+  var items=[].slice.call(document.querySelectorAll('.item'));
+  function setH(it,open){
+    var p=it.querySelector('.panel'), n=it.querySelector('.pin');
+    p.style.height = open ? n.offsetHeight+'px' : '0px';
+  }
+  function openItem(idx){
+    items.forEach(function(o,i){
+      var on = i===idx;
+      o.classList.toggle('open',on);
+      o.querySelector('.abtn').setAttribute('aria-expanded',on?'true':'false');
+      setH(o,on);
+    });
+  }
+  items.forEach(function(it,idx){
+    var b=it.querySelector('.abtn');
+    setH(it,it.classList.contains('open'));
+    b.addEventListener('click',function(){
+      if(it.classList.contains('open')){
+        it.classList.remove('open');
+        b.setAttribute('aria-expanded','false');
+        setH(it,false);
+      } else { openItem(idx); }
+    });
+  });
+  window.addEventListener('resize',function(){
+    items.forEach(function(o){ setH(o,o.classList.contains('open')); });
+  });
+
+  /* ---- direction cards open the matching accordion block ---- */
+  [].slice.call(document.querySelectorAll('.dcard[data-open]')).forEach(function(a){
+    a.addEventListener('click',function(){
+      openItem(parseInt(a.getAttribute('data-open'),10));
+    });
+  });
+
+  /* ---- application form ---- */
+  var form=document.getElementById('zform'), msg=document.getElementById('fmsg'), btn=document.getElementById('zbtn');
+  if(form){
+    function bad(el,on){
+      var w = el.closest('.fld') || el.closest('.chk');
+      if(w) w.classList.toggle('bad',on);
+    }
+    function valid(){
+      var ok=true, f=form.elements;
+      var checks=[
+        [f['Послуга'], function(v){ return v!==''; }],
+        [f['Контактна особа'], function(v){ return v.trim().length>1; }],
+        [f['Телефон'], function(v){ return v.replace(/\D/g,'').length>=9; }],
+        [f['Електронна пошта'], function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); }]
+      ];
+      checks.forEach(function(c){
+        var good=c[1](c[0].value);
+        bad(c[0],!good);
+        if(!good) ok=false;
+      });
+      var cons=f['Згода на обробку даних'];
+      bad(cons,!cons.checked);
+      if(!cons.checked) ok=false;
+      return ok;
+    }
+    form.addEventListener('input',function(e){ if(e.target.closest('.fld.bad,.chk.bad')) valid(); });
+
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      msg.className='fmsg';
+      if(!valid()){
+        msg.className='fmsg no';
+        msg.textContent='Перевірте виділені поля — щось заповнено не до кінця.';
+        return;
+      }
+      if(!WEB3FORMS_KEY){
+        msg.className='fmsg no';
+        msg.textContent='Форму ще не підключено до пошти. Зателефонуйте, будь ласка, за номером +38 066 993 0164 або напишіть на u-e-r@ukr.net.';
+        return;
+      }
+      var data={};
+      new FormData(form).forEach(function(v,k){ data[k]=v; });
+      data.access_key=WEB3FORMS_KEY;
+      data.subject=MAIL_SUBJECT;
+      data.from_name='Сайт ТОВ «УЕР»';
+      data.replyto=data['Електронна пошта'];
+
+      btn.disabled=true;
+      var label=btn.textContent;
+      btn.textContent='Надсилаємо…';
+
+      fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json',Accept:'application/json'},
+        body:JSON.stringify(data)
+      }).then(function(r){ return r.json(); }).then(function(res){
+        if(res && res.success){
+          form.reset();
+          msg.className='fmsg ok';
+          msg.textContent='Заявку відправлено. Ми зв\u2019яжемося з вами найближчим часом.';
+        } else {
+          throw new Error('send failed');
+        }
+      }).catch(function(){
+        msg.className='fmsg no';
+        msg.textContent='Не вдалося відправити заявку. Зателефонуйте за номером +38 066 993 0164 або напишіть на u-e-r@ukr.net.';
+      }).then(function(){
+        btn.disabled=false;
+        btn.textContent=label;
+      });
+    });
+  }
+
+  /* ---- scroll reveal ---- */
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+    rv.forEach(function(el){ io.observe(el); });
+  } else {
+    rv.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
