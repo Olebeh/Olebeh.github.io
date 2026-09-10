@@ -181,6 +181,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 .slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .6s ease;pointer-events:none}
 .slide.on{opacity:1;pointer-events:auto}
 .slide img{width:100%;height:100%;object-fit:cover}
+.slide--top img{object-position:center 6%}
 .slide--svg{display:grid;place-items:center;padding:16px 16px 46px;background:#1C0A0E}
 .slide--svg svg{width:100%;height:auto;max-height:100%}
 .slide .cap{
@@ -503,7 +504,6 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
         до <b>висновку експертизи</b> для вашого підприємства.
       </p>
       <div class="hero-cta">
-        <a class="btn btn--wht" href="#zayavka">Залишити заявку</a>
         <a class="btn btn--glass" href="tel:+380669930164">+38 066 993 0164</a>
       </div>
     </div>
@@ -513,7 +513,27 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
       <div class="gal-stage" id="galStage">
 
         <figure class="slide on">
-          <img src="img/tekhnichnyi-ohliad-krana.jpg" alt="Фахівець ТОВ «УЕР» проводить технічний огляд автомобільного крана" width="1280" height="853" loading="eager">
+          <img src="img/elektroobladnannia-shchyt.jpg" alt="Фахівець ТОВ «УЕР» перевіряє електрообладнання у розподільчій шафі" width="1280" height="1024" loading="eager">
+          <figcaption class="cap">Перевірка електрообладнання та технічної документації</figcaption>
+        </figure>
+
+        <figure class="slide slide--top">
+          <img src="img/obstezhennia-khodovoi-chastyny.jpg" alt="Обстеження ходової частини обладнання на рейковій колії" width="720" height="1280" loading="lazy">
+          <figcaption class="cap">Обстеження обладнання підвищеної небезпеки на об'єкті замовника</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/obstezhennia-krana-maidanchyk.jpg" alt="Фахівець ТОВ «УЕР» оглядає вантажопідіймальний кран на виробничому майданчику" width="720" height="1280" loading="lazy">
+          <figcaption class="cap">Огляд вантажопідіймального крана на виробничому майданчику</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/perevirka-vantazhozakhoplennia.jpg" alt="Перевірка вантажозахоплювального органу та канатів крана" width="720" height="1280" loading="lazy">
+          <figcaption class="cap">Перевірка вантажозахоплювальних органів і канатів</figcaption>
+        </figure>
+
+        <figure class="slide">
+          <img src="img/tekhnichnyi-ohliad-krana.jpg" alt="Фахівець ТОВ «УЕР» проводить технічний огляд автомобільного крана" width="1280" height="853" loading="lazy">
           <figcaption class="cap">Технічний огляд і експертне обстеження вантажопідіймальних кранів</figcaption>
         </figure>
 
@@ -971,7 +991,8 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
             <span>Послуга <i>*</i></span>
             <select name="Послуга" required>
               <option value="">— оберіть послугу —</option>
-              <option>Навчання з питань охорони праці та пожежної безпеки</option>
+              <option>Навчання з питань охорони праці</option>
+              <option>Навчання з питань пожежної безпеки</option>
               <option>Навчання на присвоєння групи з електробезпеки</option>
               <option>Спеціальне навчання (роботи підвищеної небезпеки)</option>
               <option>Професійне навчання працівників</option>
