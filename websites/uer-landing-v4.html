@@ -216,7 +216,6 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 .ico{width:42px;height:42px;border-radius:12px;background:rgba(202,32,38,.09);display:grid;place-items:center;flex-shrink:0}
 .ico svg{width:21px;height:21px;stroke:var(--red);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .dcard b{font-family:var(--f-disp);font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.01em}
-.dcard span{font-size:13px;color:var(--mute);line-height:1.5}
 
 /* ============ section heads ============ */
 .eyebrow{
@@ -669,8 +668,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
     </a>
     <a class="dcard rv" href="#poslugy" data-open="1">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18.5v-2.2a8.5 8.5 0 0 1 17 0v2.2Z"/><path d="M9.5 8.4V4.2h5v4.2M2 18.5h20"/></svg></span>
-      <b>Експертне обстеження та технічне діагностування</b>
-      <span>Експертиза проектної документації</span>
+      <b>Експертне обстеження, технічне діагностування, експертиза проектної документації</b>
     </a>
     <a class="dcard rv" href="#poslugy" data-open="4">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4.5 4.5v14.5H6Z"/><path d="M14 2.5V7h4.5M9 12h6M9 16h4"/></svg></span>
@@ -987,9 +985,9 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
             <label>Не заповнюйте це поле <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
           </div>
 
-          <label class="fld" id="f-service">
+          <label class="fld" id="w-service">
             <span>Послуга <i>*</i></span>
-            <select name="Послуга" required>
+            <select id="f_service" name="service" autocomplete="off" required>
               <option value="">— оберіть послугу —</option>
               <option>Навчання з питань охорони праці</option>
               <option>Навчання з питань пожежної безпеки</option>
@@ -1012,26 +1010,26 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
           </label>
 
           <div class="frow">
-            <label class="fld" id="f-name">
+            <label class="fld" id="w-name">
               <span>Контактна особа <i>*</i></span>
-              <input type="text" name="Контактна особа" autocomplete="name" required>
+              <input type="text" id="f_name" name="contact_name" autocomplete="name" required>
               <span class="err">Вкажіть ім'я та прізвище.</span>
             </label>
             <label class="fld">
               <span>Підприємство</span>
-              <input type="text" name="Підприємство" autocomplete="organization">
+              <input type="text" id="f_company" name="company" autocomplete="organization">
             </label>
           </div>
 
           <div class="frow">
-            <label class="fld" id="f-phone">
+            <label class="fld" id="w-phone">
               <span>Телефон <i>*</i></span>
-              <input type="tel" name="Телефон" inputmode="tel" autocomplete="tel" placeholder="+38 0__ ___ __ __" required>
-              <span class="err">Вкажіть телефон для зв'язку.</span>
+              <input type="tel" id="f_phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+38 0XX XXX XX XX" maxlength="19" required>
+              <span class="err">Вкажіть телефон у форматі +38 0XX XXX XX XX.</span>
             </label>
-            <label class="fld" id="f-email">
+            <label class="fld" id="w-email">
               <span>Електронна пошта <i>*</i></span>
-              <input type="email" name="Електронна пошта" autocomplete="email" placeholder="name@company.ua" required>
+              <input type="email" id="f_email" name="email" autocomplete="email" placeholder="name@company.ua" required>
               <span class="err">Перевірте адресу пошти.</span>
             </label>
           </div>
@@ -1039,21 +1037,21 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
           <div class="frow">
             <label class="fld">
               <span>Кількість осіб</span>
-              <input type="number" name="Кількість осіб" min="1" max="999" placeholder="для навчання">
+              <input type="number" id="f_people" name="people_count" min="1" max="999" inputmode="numeric" autocomplete="off" placeholder="для навчання">
             </label>
             <label class="fld">
               <span>Місто / адреса об'єкта</span>
-              <input type="text" name="Місто або адреса об'єкта">
+              <input type="text" id="f_city" name="city" autocomplete="address-level2">
             </label>
           </div>
 
           <label class="fld">
             <span>Деталі заявки</span>
-            <textarea name="Деталі заявки" placeholder="Тип обладнання, кількість одиниць, строки, курс навчання тощо"></textarea>
+            <textarea id="f_details" name="details" placeholder="Тип обладнання, кількість одиниць, строки, курс навчання тощо"></textarea>
           </label>
 
-          <label class="chk" id="f-consent">
-            <input type="checkbox" name="Згода на обробку даних" value="так" required>
+          <label class="chk" id="w-consent">
+            <input type="checkbox" id="f_consent" name="consent" value="так" required>
             <span>Я даю згоду на обробку моїх персональних даних для опрацювання заявки. <i style="font-style:normal;color:var(--red)">*</i></span>
           </label>
 
@@ -1166,7 +1164,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
      поштової скриньки, на яку приходитимуть заявки.
      Поки поле порожнє, форма показує повідомлення й не відправляється.
      ================================================================ */
-  var WEB3FORMS_KEY = "";
+  var WEB3FORMS_KEY = "1296721e-33c6-4ea9-a281-08a64c482227";
   var MAIL_SUBJECT  = "Нова заявка з сайту УЕР";
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1274,20 +1272,58 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
       var w = el.closest('.fld') || el.closest('.chk');
       if(w) w.classList.toggle('bad',on);
     }
+    /* ---- phone: live formatting to +38 0XX XXX XX XX ---- */
+    var ph=document.getElementById('f_phone');
+    function phDigits(v){
+      v=v||'';
+      /* our own rendered prefix: take what follows it verbatim */
+      if(v.indexOf('+38 0')===0){
+        var r=v.slice(5).replace(/\D/g,'');
+        /* user kept typing the country code after we already rendered it */
+        if(r.indexOf('380')===0) r=r.slice(3);
+        return r.slice(0,9);
+      }
+      /* anything else (paste, autofill, first keystroke): normalise a country code */
+      var d=v.replace(/\D/g,'');
+      if(d.indexOf('380')===0) d=d.slice(3);
+      else if(d.indexOf('80')===0) d=d.slice(2);
+      else if(d.indexOf('0')===0) d=d.slice(1);
+      return d.slice(0,9);
+    }
+    function phFormat(d){
+      if(!d) return '';
+      var s='+38 0'+d.slice(0,2);
+      if(d.length>2) s+=' '+d.slice(2,5);
+      if(d.length>5) s+=' '+d.slice(5,7);
+      if(d.length>7) s+=' '+d.slice(7,9);
+      return s;
+    }
+    if(ph){
+      ph.addEventListener('input',function(){
+        var atEnd = ph.selectionStart===ph.value.length;
+        var f=phFormat(phDigits(ph.value));
+        if(f!==ph.value){
+          ph.value=f;
+          if(atEnd){ try{ ph.setSelectionRange(f.length,f.length); }catch(e){} }
+        }
+      });
+      ph.addEventListener('blur',function(){ if(phDigits(ph.value).length===0) ph.value=''; });
+    }
+
     function valid(){
       var ok=true, f=form.elements;
       var checks=[
-        [f['Послуга'], function(v){ return v!==''; }],
-        [f['Контактна особа'], function(v){ return v.trim().length>1; }],
-        [f['Телефон'], function(v){ return v.replace(/\D/g,'').length>=9; }],
-        [f['Електронна пошта'], function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); }]
+        [f['service'], function(v){ return v!==''; }],
+        [f['contact_name'], function(v){ return v.trim().length>1; }],
+        [f['phone'], function(v){ return phDigits(v).length===9; }],
+        [f['email'], function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); }]
       ];
       checks.forEach(function(c){
         var good=c[1](c[0].value);
         bad(c[0],!good);
         if(!good) ok=false;
       });
-      var cons=f['Згода на обробку даних'];
+      var cons=f['consent'];
       bad(cons,!cons.checked);
       if(!cons.checked) ok=false;
       return ok;
@@ -1307,12 +1343,22 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
         msg.textContent='Форму ще не підключено до пошти. Зателефонуйте, будь ласка, за номером +38 066 993 0164 або напишіть на u-e-r@ukr.net.';
         return;
       }
+      var LABEL={
+        service:'Послуга', contact_name:'Контактна особа', company:'Підприємство',
+        phone:'Телефон', email:'Електронна пошта', people_count:'Кількість осіб',
+        city:'Місто або адреса об\u2019єкта', details:'Деталі заявки',
+        consent:'Згода на обробку даних'
+      };
       var data={};
-      new FormData(form).forEach(function(v,k){ data[k]=v; });
+      new FormData(form).forEach(function(v,k){
+        if(k==='botcheck'){ data.botcheck=v; return; }
+        if(String(v).trim()==='') return;
+        data[LABEL[k]||k]=v;
+      });
       data.access_key=WEB3FORMS_KEY;
       data.subject=MAIL_SUBJECT;
       data.from_name='Сайт ТОВ «УЕР»';
-      data.replyto=data['Електронна пошта'];
+      data.replyto=form.elements['email'].value.trim();
 
       btn.disabled=true;
       var label=btn.textContent;
