@@ -12,7 +12,7 @@
 <meta property="og:locale" content="uk_UA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --red:#CA2026;
@@ -44,7 +44,7 @@
   --line:#E3E3DF;
 
   --f-disp:"Rubik",system-ui,sans-serif;
-  --f-body:"Manrope",system-ui,sans-serif;
+  --f-body:"Rubik",system-ui,sans-serif;
   --f-mono:"Roboto Mono",ui-monospace,monospace;
 
   --r:14px;
@@ -154,7 +154,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 }
 .chip s{text-decoration:none;width:6px;height:6px;border-radius:50%;background:var(--red-lt);box-shadow:0 0 0 4px rgba(255,90,97,.18)}
 .hero h1{font-size:clamp(34px,4.9vw,60px);font-weight:800;line-height:1.05;max-width:15ch}
-.hero h1 em{font-style:normal;color:var(--red-lt)}
+.hero h1 em{font-style:normal;color:var(--red)}
 .hero p.sub{margin:24px 0 0;font-size:17.5px;color:var(--d-mute);max-width:52ch;line-height:1.62}
 .hero p.sub b{color:#fff;font-weight:600}
 .hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:34px}
@@ -182,6 +182,9 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 .slide.on{opacity:1;pointer-events:auto}
 .slide img{width:100%;height:100%;object-fit:cover}
 .slide--top img{object-position:center 6%}
+.slide--up img{object-position:center 34%}
+.slide--fit{background:#0D0D10}
+.slide--fit img{object-fit:contain;padding:10px 10px 34px}
 .slide--svg{display:grid;place-items:center;padding:16px 16px 46px;background:#1C0A0E}
 .slide--svg svg{width:100%;height:auto;max-height:100%}
 .slide .cap{
@@ -323,6 +326,9 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 .fside p{color:var(--d-mute);font-size:16px;margin:0 0 18px;max-width:44ch}
 .fside ul{margin:22px 0 0;padding:0;list-style:none}
 .fside li{position:relative;padding:9px 0 9px 26px;font-size:15px;color:var(--d-txt);line-height:1.5}
+.fphone{margin-top:24px;font-size:15px;text-wrap:pretty}
+.fphone a{font-family:var(--f-mono);font-weight:700;color:#fff;text-decoration:none;white-space:nowrap}
+.fphone a:hover{color:var(--red-lt)}
 .fside li::before{
   content:"";position:absolute;left:0;top:17px;width:9px;height:9px;border-radius:50%;
   border:2px solid var(--red-lt);
@@ -495,8 +501,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
   <div class="wrap hero-in">
 
     <div>
-      <span class="chip"><s></s> 4 чинних дозволи Держпраці</span>
-      <h1>Наші експертні рішення&nbsp;— <em>ваша безпека</em></h1>
+      <h1>Наші експертні рішення&nbsp;— <em>ваша безпека!</em></h1>
       <p class="sub">
         Навчання, експертиза, технічне діагностування та дозвільна документація
         у сфері охорони праці й промислової безпеки. Від навчання персоналу
@@ -526,7 +531,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
           <figcaption class="cap">Огляд вантажопідіймального крана на виробничому майданчику</figcaption>
         </figure>
 
-        <figure class="slide">
+        <figure class="slide slide--up">
           <img src="img/perevirka-vantazhozakhoplennia.jpg" alt="Перевірка вантажозахоплювального органу та канатів крана" width="720" height="1280" loading="lazy">
           <figcaption class="cap">Перевірка вантажозахоплювальних органів і канатів</figcaption>
         </figure>
@@ -637,9 +642,14 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
           <figcaption class="cap">Посудина, що працює під тиском — об'єкт експертного обстеження</figcaption>
         </figure>
 
-        <figure class="slide">
-          <img src="img/tekhnichne-diahnostuvannia-shema.jpg" alt="Схеми технічного діагностування мостового крана та вилкового навантажувача" width="1280" height="981" loading="lazy">
-          <figcaption class="cap">Технічне діагностування: кран мостовий і навантажувач вилковий</figcaption>
+        <figure class="slide slide--fit">
+          <img src="img/shema-kran-mostovyi.jpg" alt="Схема технічного діагностування мостового крана" width="636" height="583" loading="lazy">
+          <figcaption class="cap">Кран мостовий — об'єкт експертного обстеження</figcaption>
+        </figure>
+
+        <figure class="slide slide--fit">
+          <img src="img/shema-navantazhuvach-vylkovyi.jpg" alt="Схема технічного діагностування вилкового навантажувача" width="639" height="587" loading="lazy">
+          <figcaption class="cap">Навантажувач вилковий — об'єкт експертного обстеження</figcaption>
         </figure>
 
         <figure class="slide">
@@ -662,23 +672,23 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 <!-- ============ DIRECTIONS BAND ============ -->
 <div class="band">
   <div class="wrap band-in">
-    <a class="dcard rv" href="#poslugy" data-open="0">
+    <a class="dcard rv" href="#poslugy" data-open="3">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4 6v6c0 5 3.4 8.5 8 9.5 4.6-1 8-4.5 8-9.5V6l-8-3.5Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
       <b>Навчання з питань охорони праці та пожежної безпеки</b>
     </a>
-    <a class="dcard rv" href="#poslugy" data-open="1">
+    <a class="dcard rv" href="#poslugy" data-open="0">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18.5v-2.2a8.5 8.5 0 0 1 17 0v2.2Z"/><path d="M9.5 8.4V4.2h5v4.2M2 18.5h20"/></svg></span>
       <b>Експертне обстеження, технічне діагностування, експертиза проектної документації</b>
     </a>
-    <a class="dcard rv" href="#poslugy" data-open="4">
+    <a class="dcard rv" href="#poslugy" data-open="3">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.5h8l4.5 4.5v14.5H6Z"/><path d="M14 2.5V7h4.5M9 12h6M9 16h4"/></svg></span>
       <b>Аудит стану охорони праці</b>
     </a>
-    <a class="dcard rv" href="#poslugy" data-open="0">
+    <a class="dcard rv" href="#poslugy" data-open="4">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M9 9.5V20"/></svg></span>
       <b>Атестація робочих місць</b>
     </a>
-    <a class="dcard rv" href="#poslugy" data-open="2">
+    <a class="dcard rv" href="#poslugy" data-open="1">
       <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.6 2.6 20h18.8L12 3.6Z"/><path d="M12 10v4.2M12 17.2h.01"/></svg></span>
       <b>Консультації щодо порядку розслідування нещасних випадків</b>
     </a>
@@ -712,8 +722,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
       <p>
         Ми ведемо замовника через увесь процес: від визначення переліку необхідних
         документів до передачі готового висновку, паспорта чи посвідчення.
-        Екзамен після навчання можна скласти дистанційно <b>по ZOOM</b> —
-        за бажанням замовника.
+        Екзамен після навчання можна скласти дистанційно.
       </p>
 
       <ul class="facts">
@@ -790,36 +799,6 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
       <div class="item open">
         <button class="abtn" aria-expanded="true">
           <span class="n">01</span>
-          <span class="t">Навчання та експертиза з питань охорони праці</span>
-          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
-        </button>
-        <div class="panel"><div class="pin">
-          <p>Навчання посадових осіб і працівників за всіма НПАОП, що діють в межах України, та експертиза стану охорони праці на підприємстві.</p>
-          <div class="cols">
-            <ul>
-              <li><b>Навчання з питань охорони праці</b> — за всіма НПАОП, пожежна безпека, електробезпека, робітничі професії</li>
-              <li><b>Лекції зі спеціальних Правил безпеки</b> — галузеві, тривалість 1 година</li>
-              <li><b>Спеціальне навчання</b> для осіб, які виконують роботи підвищеної небезпеки</li>
-              <li><b>Професійне навчання працівників</b></li>
-            </ul>
-            <ul>
-              <li><b>Навчання на присвоєння групи</b> з електробезпеки</li>
-              <li><b>Експертиза з питань охорони праці</b> — зі складанням Висновку експертизи для Дозволу Держпраці</li>
-              <li><b>Атестація робочих місць</b> за умовами праці</li>
-              <li><b>Декларація відповідності</b> матеріально-технічної бази — підготовка до реєстрації</li>
-            </ul>
-          </div>
-          <span class="tag">Екзамен по ZOOM — за бажанням замовника</span>
-          <div class="norm">
-            <h4>Нормативна база</h4>
-            <p><a href="https://zakon.rada.gov.ua/laws/show/2694-12" target="_blank" rel="noopener">Закон України «Про охорону праці»</a> (ст. 13, 15, 16, 18, 42) · <a href="https://zakon.rada.gov.ua/laws/show/z0231-05" target="_blank" rel="noopener">Типове положення про порядок проведення навчання і перевірки знань з питань охорони праці та Перелік робіт з підвищеною небезпекою</a> (додаток 3, п. 5.1, 5.3, 5.6; розділ 4) · Довідник кваліфікаційних характеристик професій працівників (ДКХП), професійні стандарти, Класифікатор професій ДК 003 · <a href="https://zakon.rada.gov.ua/laws/show/442-92-%D0%BF" target="_blank" rel="noopener">Постанова КМУ № 442 від 01.08.1992 «Про Порядок проведення атестації робочих місць за умовами праці»</a>, Кодекс законів про працю · <a href="https://zakon.rada.gov.ua/laws/show/1107-2011-%D0%BF" target="_blank" rel="noopener">Порядок видачі дозволів, Постанова КМУ № 1107</a>.</p>
-          </div>
-        </div></div>
-      </div>
-
-      <div class="item">
-        <button class="abtn" aria-expanded="false">
-          <span class="n">02</span>
           <span class="t">Експертне обстеження та технічне діагностування</span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
@@ -849,7 +828,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 
       <div class="item">
         <button class="abtn" aria-expanded="false">
-          <span class="n">03</span>
+          <span class="n">02</span>
           <span class="t">Нещасні випадки на виробництві</span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
@@ -870,7 +849,7 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 
       <div class="item">
         <button class="abtn" aria-expanded="false">
-          <span class="n">04</span>
+          <span class="n">03</span>
           <span class="t">Експертиза проектної документації</span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
@@ -896,12 +875,43 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
 
       <div class="item">
         <button class="abtn" aria-expanded="false">
-          <span class="n">05</span>
-          <span class="t">Аудит стану охорони праці</span>
+          <span class="n">04</span>
+          <span class="t">Експертиза та аудит</span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="panel"><div class="pin">
-          <p style="max-width:80ch">Незалежна оцінка стану охорони праці на підприємстві: перевірка документації, фактичного стану робочих місць та відповідності вимогам НПАОП — з переліком виявлених невідповідностей і рекомендаціями щодо їх усунення.</p>
+          <p>Незалежна оцінка стану охорони праці на підприємстві: перевірка документації, фактичного стану робочих місць та відповідності вимогам НПАОП — з переліком виявлених невідповідностей і рекомендаціями щодо їх усунення. Навчання посадових осіб і працівників за всіма НПАОП, що діють в межах України, та експертиза стану охорони праці на підприємстві.</p>
+          <div class="cols">
+            <ul>
+              <li><b>Навчання з питань охорони праці</b> — за всіма НПАОП, пожежна безпека, електробезпека, робітничі професії</li>
+              <li><b>Лекції зі спеціальних Правил безпеки</b> — галузеві, тривалість 1 година</li>
+              <li><b>Спеціальне навчання</b> для осіб, які виконують роботи підвищеної небезпеки</li>
+              <li><b>Професійне навчання працівників</b></li>
+            </ul>
+            <ul>
+              <li><b>Навчання на присвоєння групи</b> з електробезпеки</li>
+              <li><b>Експертиза з питань охорони праці</b> — зі складанням Висновку експертизи для Дозволу Держпраці</li>
+              <li><b>Декларація відповідності</b> матеріально-технічної бази — підготовка до реєстрації</li>
+            </ul>
+          </div>
+          <div class="norm">
+            <h4>Нормативна база</h4>
+            <p><a href="https://zakon.rada.gov.ua/laws/show/2694-12" target="_blank" rel="noopener">Закон України «Про охорону праці»</a> (ст. 13, 15, 16, 18, 42) · <a href="https://zakon.rada.gov.ua/laws/show/z0231-05" target="_blank" rel="noopener">Типове положення про порядок проведення навчання і перевірки знань з питань охорони праці та Перелік робіт з підвищеною небезпекою</a> (додаток 3, п. 5.1, 5.3, 5.6; розділ 4) · Довідник кваліфікаційних характеристик професій працівників (ДКХП), професійні стандарти, Класифікатор професій ДК 003 · <a href="https://zakon.rada.gov.ua/laws/show/1107-2011-%D0%BF" target="_blank" rel="noopener">Порядок видачі дозволів, Постанова КМУ № 1107</a>.</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="item">
+        <button class="abtn" aria-expanded="false">
+          <span class="n">05</span>
+          <span class="t">Атестація робочих місць за умовами праці</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="panel"><div class="pin">
+          <div class="norm" style="margin-top:0;padding-top:0;border-top:0">
+            <h4>Нормативна база</h4>
+            <p><a href="https://zakon.rada.gov.ua/laws/show/442-92-%D0%BF" target="_blank" rel="noopener">Постанова КМУ № 442 від 01.08.1992 «Про Порядок проведення атестації робочих місць за умовами праці»</a> · Кодекс законів про працю.</p>
+          </div>
         </div></div>
       </div>
 
@@ -973,9 +983,9 @@ h1,h2,h3{margin:0;font-family:var(--f-disp);font-weight:700;line-height:1.13;let
           <li>Уточнюємо перелік необхідних документів</li>
           <li>Надсилаємо розрахунок вартості</li>
         </ul>
-        <p style="margin-top:24px;font-size:15px">
-          Не зручно заповнювати форму? Телефонуйте:
-          <a href="tel:+380669930164" style="font-family:var(--f-mono);font-weight:700;color:#fff;text-decoration:none">+38 066 993 0164</a>
+        <p class="fphone">
+          Не зручно заповнювати форму?<br>
+          Телефонуйте: <a href="tel:+380669930164">+38 066 993 0164</a>
         </p>
       </div>
 
