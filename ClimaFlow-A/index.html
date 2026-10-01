@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClimaFlow — кондиціонери, рекуператори, теплові насоси під ключ</title>
+<meta name="description" content="Підбір, продаж, професійний монтаж та сервіс кліматичного обладнання під ключ: кондиціонери, рекуператори, теплові насоси та теплові завіси. Працюємо по місту та області.">
+<meta name="theme-color" content="#F3F6F8">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ClimaFlow — кліматичний комфорт під ключ">
+<meta property="og:description" content="Підбір, продаж, монтаж та сервіс кондиціонерів, рекуператорів, теплових насосів і теплових завіс.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta property="og:locale" content="uk_UA">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "ClimaFlow",
+  "slogan": "Клімат під ключ",
+  "telephone": "+380968741892",
+  "image": "img/logo-full.png",
+  "sameAs": [
+    "https://www.instagram.com/kostya_horoshko",
+    "https://www.facebook.com/share/1BpUo2jtDi/",
+    "https://www.tiktok.com/@kostya_climaflow"
+  ]
+}
+</script>
+
+<style>
+:root{
+  --paper:#F3F6F8;
+  --white:#FFFFFF;
+  --ink:#333333;
+  --slate:#5F676D;
+  --line:#DCE3E8;
+  --flame:#EE8E8A;
+  --amber:#F5C16C;
+  --ice:#BFDFF6;
+  --ice-deep:#2F6E9E;
+  --band:#2C2D2E;
+
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  --wrap:1200px;
+  --gut:clamp(16px, 4vw, 40px);
+  --sec:clamp(72px, 10vw, 128px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ice-deep);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+h1,h2,h3,.contact__tel,.steps .num,.included li::after{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(34px, 4.6vw, 54px)}
+h3{font-size:clamp(26px, 2.6vw, 32px)}
+p{margin:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:var(--white);font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;transition:background .2s, color .2s}
+.btn:hover{background:#000;border-color:#000}
+.btn--ghost{background:transparent;color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--white)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- header ---------- */
+.header{position:sticky;top:0;z-index:50;background:rgba(243,246,248,.88);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.header.is-scrolled{border-bottom-color:var(--line)}
+.header__in{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.brand img{width:44px;height:auto}
+.brand span{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.16em;white-space:nowrap}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:var(--slate);padding:6px 0}
+.nav a:hover{color:var(--ink)}
+.header__tel{font-weight:600;text-decoration:none;font-size:15px;white-space:nowrap}
+.header .btn{min-height:42px;padding:0 20px;font-size:14px}
+.burger{display:none;margin-left:auto;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:10px}
+.burger span{display:block;height:1.5px;background:var(--ink);margin:6px 0;transition:transform .25s, opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden}
+.hero__in{position:relative;display:grid;grid-template-columns:minmax(0,1fr);min-height:min(760px, calc(100svh - 72px));align-items:center}
+.hero__text{position:relative;z-index:2;padding:56px 0 72px;max-width:min(600px, 52%)}
+.tagline{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--slate);margin-bottom:28px}
+.hero h1{font-size:clamp(46px, 5.6vw, 80px);line-height:1.02}
+.hero__lead{font-size:clamp(17px, 1.5vw, 19px);color:var(--slate);max-width:34em;margin-top:28px}
+.equip{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0;list-style:none}
+.equip a{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);font-size:14px;font-weight:500;text-decoration:none}
+.equip a:hover{border-color:var(--ink)}
+.area{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14.5px;color:var(--slate)}
+.area svg{width:16px;height:16px;flex:none}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+
+.hero__media{position:absolute;top:0;bottom:0;left:52%;right:calc((100vw - 100%) / -2);z-index:1}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;clip-path:polygon(30% 0, 100% 0, 100% 100%, 0 100%)}
+.hero__slash{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;overflow:visible}
+.hero__slash line{stroke:var(--ink);stroke-width:2}
+.hero__mark{position:absolute;z-index:4;right:clamp(16px, 3vw, 36px);bottom:48px;width:clamp(96px, 10vw, 132px);aspect-ratio:1;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 10px 30px rgba(40,60,80,.14)}
+.hero__mark img{width:72%}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero__slash line{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s .25s cubic-bezier(.6,.05,.25,1) forwards}
+  .hero__media img{animation:reveal 1.1s .25s cubic-bezier(.6,.05,.25,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes reveal{from{clip-path:polygon(100% 0, 100% 0, 100% 100%, 66% 100%)}}
+}
+
+/* ---------- sections ---------- */
+.sec{padding:var(--sec) 0}
+.sec--white{background:var(--white)}
+.sec__head{max-width:720px;margin-bottom:clamp(40px, 5vw, 64px)}
+.sec__head p{color:var(--slate);margin-top:18px;font-size:17px;max-width:38em}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px, 6vw, 88px);align-items:center}
+.intro__lead{font-family:var(--serif);font-weight:500;font-size:clamp(28px, 3.3vw, 42px);line-height:1.22;max-width:22ch}
+.intro__body{color:var(--slate);font-size:17px;margin-top:28px;max-width:34em}
+.intro figure{margin:0}
+.intro figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:4px}
+
+.perks{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));margin:clamp(56px, 8vw, 96px) 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.perks li{padding:30px 26px 0 0}
+.perks li + li{padding-left:26px;border-left:1px solid var(--line)}
+.perks svg{width:32px;height:32px;color:var(--ice-deep);margin-bottom:18px}
+.perks h3{font-size:24px;margin-bottom:10px}
+.perks p{color:var(--slate);font-size:15px}
+
+/* services */
+.services{border-top:1px solid var(--ink)}
+.svc{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr) 240px;gap:clamp(24px, 4vw, 56px);padding:clamp(32px, 4vw, 48px) 0;border-bottom:1px solid var(--line);align-items:start}
+.svc__name{display:flex;gap:18px;align-items:flex-start}
+.svc__name svg{width:44px;height:44px;flex:none;margin-top:2px}
+.svc__name small{display:block;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.3;color:var(--slate)}
+.svc__body p{color:var(--slate);font-size:16px;max-width:36em}
+.svc__scope{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.brands{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 0;padding:0;list-style:none}
+.brands li{display:inline-flex;align-items:center;height:34px;padding:0 12px;border:1px solid var(--line);border-radius:3px;background:var(--white);font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+.brands-label{font-size:13px;color:var(--slate);margin-top:22px}
+.svc .btn{min-height:46px;font-size:14px;white-space:nowrap;justify-self:end}
+.icon-cool{color:var(--ice-deep)}
+.icon-warm{color:#C9605B}
+
+/* included — sequence */
+.included{position:relative;display:grid;grid-template-columns:repeat(7, minmax(0,1fr));margin:0;padding:0;list-style:none;counter-reset:inc}
+.included::before{content:"";position:absolute;left:0;right:0;top:9px;height:1.5px;background:linear-gradient(90deg, var(--flame), var(--amber) 35%, var(--ice) 70%, var(--ice-deep))}
+.included li{position:relative;padding:38px 10px 0 0;counter-increment:inc}
+.included li::before{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
+.included li::after{content:counter(inc);position:absolute;top:-30px;left:2px;font-family:var(--serif);font-size:18px;color:var(--slate)}
+.included span{font-weight:600;font-size:16px;line-height:1.35;display:block}
+
+/* steps — dark band */
+.band{background:var(--band);color:#EEF2F4}
+.band .sec__head p{color:#B4BCC2}
+.steps{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:clamp(24px, 3vw, 40px);margin:0;padding:0;list-style:none}
+.steps li{border-top:1px solid rgba(255,255,255,.22);padding-top:24px}
+.steps .num{font-family:var(--serif);font-size:clamp(54px, 5.4vw, 72px);line-height:1;font-weight:500;color:#fff;display:flex;align-items:baseline;gap:2px}
+.steps .num small{font-size:.38em;color:#8E989F;font-weight:500}
+.steps h3{font-size:27px;margin:20px 0 10px;color:#fff}
+.steps p{color:#B4BCC2;font-size:15.5px}
+
+/* audience */
+.audience{display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.audience li{background:var(--paper);border-radius:4px;padding:30px 24px 28px;display:flex;flex-direction:column;gap:40px;min-height:200px}
+.audience svg{width:46px;height:46px;color:var(--ink)}
+.audience span{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.15;margin-top:auto}
+
+/* audience + photo */
+.who{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px, 4vw, 56px);align-items:stretch}
+.who figure{margin:0;position:relative;min-height:420px}
+.who figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:4px}
+.who figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);padding:6px 12px;border-radius:3px;font-size:13px;color:var(--ink)}
+.who .audience{grid-template-columns:repeat(2, minmax(0,1fr))}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px, 6vw, 96px);align-items:start}
+.contact__tel{display:inline-block;font-family:var(--serif);font-weight:600;font-size:clamp(40px, 5vw, 60px);line-height:1;text-decoration:none;margin-top:32px;letter-spacing:.01em}
+.contact__tel:hover{color:var(--ice-deep)}
+.contact__note{color:var(--slate);margin-top:12px;font-size:15px}
+.messengers{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.socials{display:flex;gap:10px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.socials a{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 16px 0 12px;border:1px solid var(--line);border-radius:999px;background:var(--white);text-decoration:none;font-size:14px;font-weight:500}
+.socials a:hover{border-color:var(--ink)}
+.socials svg{width:20px;height:20px}
+
+.form{background:var(--white);border-radius:6px;padding:clamp(24px, 4vw, 44px);box-shadow:0 1px 0 var(--line), 0 24px 60px -30px rgba(40,60,80,.25)}
+.form h3{font-size:30px;margin-bottom:8px}
+.form > p{color:var(--slate);font-size:15px;margin-bottom:26px}
+.field{display:block;margin-bottom:16px}
+.field span{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid var(--line);border-radius:4px;background:var(--paper);font-size:16px;transition:border-color .15s, background .15s}
+.field textarea{min-height:104px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ice-deep);background:var(--white)}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23333' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.form .btn{width:100%;margin-top:8px}
+.form__fine{font-size:12.5px;color:var(--slate);margin-top:14px;text-align:center}
+.form__status{margin-top:16px;padding:14px 16px;border-radius:4px;font-size:15px;display:none}
+.form__status.is-ok{display:block;background:#E6F2EA;color:#1F5A33}
+.form__status.is-err{display:block;background:#FBEAEA;color:#8A2B28}
+.hp{display:none}
+
+/* footer */
+.footer{background:var(--white);border-top:1px solid var(--line);padding:48px 0 40px}
+.footer__in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer img{width:150px}
+.footer__meta{font-size:14px;color:var(--slate);text-align:right}
+.footer__meta a{font-weight:600;color:var(--ink);text-decoration:none}
+
+/* mobile call bar */
+.callbar{display:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .nav{gap:18px}
+  .header__tel{display:none}
+  .svc{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+  .svc .btn{grid-column:2;justify-self:start}
+  .svc{grid-template-columns:minmax(0,1fr) minmax(0,1.4fr)}
+  .included{grid-template-columns:repeat(4, minmax(0,1fr));row-gap:64px}
+  .included::before{display:none}
+  .included li{border-top:1.5px solid var(--line)}
+  .included li::before{top:-9px}
+}
+@media (max-width:900px){
+  .nav,.header .btn{display:none}
+  .burger{display:block}
+  .header.menu-open .nav{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--gut) 20px}
+  .header.menu-open .nav a{padding:14px 0;font-size:17px;color:var(--ink);border-bottom:1px solid var(--line)}
+
+  .hero__in{grid-template-columns:1fr;min-height:0}
+  .hero__text{max-width:none}
+  .hero__media{position:relative;inset:auto;width:auto;margin:0 calc(-1 * var(--gut));height:min(64vw, 440px);order:-1}
+  .hero__media img{clip-path:polygon(0 0, 100% 0, 100% 72%, 0 100%);object-position:50% 58%}
+  @media (prefers-reduced-motion:no-preference){
+    @keyframes reveal{from{clip-path:polygon(0 0, 100% 0, 100% 0, 0 0)}}
+  }
+  .hero__slash{display:none}
+  .hero__mark{bottom:auto;top:calc(min(64vw, 440px) - 86px);right:var(--gut);width:96px}
+  .hero__text{padding:20px 0 56px}
+
+  .intro{grid-template-columns:1fr}
+  .intro figure img{aspect-ratio:4/3}
+  .perks{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .perks li:nth-child(3){padding-left:0;border-left:0}
+  .perks li:nth-child(n+3){border-top:1px solid var(--line);margin-top:30px}
+  .steps{grid-template-columns:repeat(2, minmax(0,1fr));row-gap:48px}
+  .audience{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .who{grid-template-columns:1fr}
+  .who figure{min-height:0;aspect-ratio:4/3}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{padding-bottom:64px}
+  .brand span{font-size:18px}
+  .svc{grid-template-columns:1fr;gap:18px}
+  .svc .btn{grid-column:auto;width:100%}
+  .included{grid-template-columns:1fr;row-gap:0}
+  .included li{border-top:0;border-left:1.5px solid var(--line);padding:0 0 26px 28px;margin-left:8px}
+  .included li::before{top:3px;left:-9px}
+  .included li::after{content:none}
+  .perks{grid-template-columns:1fr}
+  .perks li,.perks li + li{padding:26px 0 0;border-left:0;margin-top:0}
+  .perks li + li{border-top:1px solid var(--line);margin-top:26px}
+  .steps{grid-template-columns:1fr;row-gap:36px}
+  .audience li{min-height:160px;padding:22px 18px;gap:28px}
+  .audience span{font-size:22px}
+  .footer__in{flex-direction:column;align-items:flex-start}
+  .footer__meta{text-align:left}
+
+  .callbar{display:grid;grid-template-columns:1.3fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--white);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:60px;font-size:14px;font-weight:600;text-decoration:none}
+  .callbar a + a{border-left:1px solid var(--line)}
+  .callbar a:first-child{background:var(--ink);color:#fff}
+  .callbar svg{width:18px;height:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M6.6 3.5h2.7l1.4 4-2 1.3a11.5 11.5 0 0 0 6.5 6.5l1.3-2 4 1.4v2.7a2 2 0 0 1-2.1 2A16.6 16.6 0 0 1 4.6 5.6a2 2 0 0 1 2-2.1Z"/></symbol>
+    <symbol id="i-viber" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 2.8c5.3 0 8.6 2.4 8.6 7.6s-3.3 7.6-8.6 7.6c-.9 0-1.7-.1-2.5-.2L6 20.6v-3.7C4.2 15.6 3.4 13.4 3.4 10.4 3.4 5.2 6.7 2.8 12 2.8Z"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M9.2 7.6c.4-.3 1-.2 1.2.3l.5 1.1c.2.4 0 .8-.3 1.1l-.3.3c.4 1.1 1.3 2 2.4 2.4l.3-.3c.3-.3.7-.5 1.1-.3l1.1.5c.5.2.6.8.3 1.2-.6.8-1.7 1.1-2.7.6a7.6 7.6 0 0 1-3.9-3.9c-.4-1-.2-2.1.3-3Z"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M21 4 3 11.2l6.2 2.2L18 7.5l-7 7.2.3 5.3 3-3.7 4.6 3.5L21 4Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M13.5 21v-7.5h2.8l.4-3.2h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V4a20 20 0 0 0-2.5-.1c-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4v3.2h2.8V21"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M14 3.5v11.4a3.6 3.6 0 1 1-3.6-3.6M14 3.5c.3 2.6 2.1 4.4 4.8 4.6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  </defs>
+</svg>
+
+<header class="header" id="top">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="ClimaFlow — на початок сторінки">
+      <img src="img/logo-mark.png" alt="" width="44" height="45">
+      <span>CLIMA FLOW</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основна навігація">
+      <a href="#services">Послуги</a>
+      <a href="#process">Як ми працюємо</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a class="header__tel" href="tel:+380968741892">096 874 18 92</a>
+    <a class="btn" href="#contacts">Отримати консультацію</a>
+    <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="tagline">Продаж &bull; Монтаж &bull; Сервіс</p>
+      <h1>ClimaFlow&nbsp;— кліматичний комфорт під&nbsp;ключ.</h1>
+      <p class="hero__lead">Підбір, продаж, професійний монтаж та сервіс кліматичного обладнання — під ключ.</p>
+      <ul class="equip" aria-label="Обладнання">
+        <li><a href="#svc-ac">Кондиціонери</a></li>
+        <li><a href="#svc-erv">Рекуператори</a></li>
+        <li><a href="#svc-hp">Теплові насоси</a></li>
+        <li><a href="#svc-curtain">Теплові завіси</a></li>
+      </ul>
+      <p class="area"><svg aria-hidden="true"><use href="#i-pin"/></svg>Працюємо по місту та області.</p>
+      <div class="hero__cta">
+        <a class="btn" href="#contacts">Отримати консультацію</a>
+        <a class="btn btn--ghost" href="tel:+380968741892"><svg aria-hidden="true"><use href="#i-phone"/></svg>096 874 18 92</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <img src="img/work-outdoor-units.jpg" alt="Три зовнішні блоки кондиціонування, встановлені на металевих рамах біля стіни будівлі" width="960" height="1280" fetchpriority="high">
+    </div>
+    <svg class="hero__slash" aria-hidden="true">
+      <line x1="0" y1="0" x2="0" y2="0" pathLength="1" id="slashLine"/>
+    </svg>
+    <div class="hero__mark" aria-hidden="true"><img src="img/logo-mark.png" alt=""></div>
+  </div>
+</section>
+
+<!-- INTRO + ADVANTAGES -->
+<section class="sec sec--white" id="about">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <h2 class="sr-only">Про ClimaFlow</h2>
+        <p class="intro__lead">Кондиціонер — це не просто техніка на стіні.</p>
+        <p class="intro__body">Важливо правильно визначити потужність, врахувати площу та особливості приміщення, підібрати відповідну модель і виконати якісний монтаж.</p>
+        <p class="intro__body" style="margin-top:16px">ClimaFlow бере на себе весь процес — від підбору обладнання до його встановлення та подальшого обслуговування.</p>
+      </div>
+      <figure>
+        <img src="img/work-service.jpg" alt="Майстер ClimaFlow підключає манометри до зовнішнього блока кондиціонера на фасаді" width="589" height="1044" loading="lazy">
+      </figure>
+    </div>
+
+    <ul class="perks">
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="24" height="22" rx="2"/><path d="M4 11h24M10 16h5M10 21h12"/></svg>
+        <h3>Правильний підбір</h3>
+        <p>Обираємо обладнання відповідно до площі, планування, призначення приміщення та бюджету.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M19.5 5.5a6 6 0 0 0-7.6 7.6L5 20l3.9 3.9 6.9-6.9a6 6 0 0 0 7.6-7.6l-3.5 3.5-3.4-.5-.5-3.4 3.5-3.5Z"/></svg>
+        <h3>Професійний монтаж</h3>
+        <p>Встановлюємо обладнання з використанням професійного інструменту.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M16 4l2.6 7.4L26 14l-7.4 2.6L16 24l-2.6-7.4L6 14l7.4-2.6L16 4Z"/><path d="M25 22l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1 1-2.5Z"/></svg>
+        <h3>Акуратна робота</h3>
+        <p>Дбаємо не лише про результат, а й про вигляд приміщення після монтажу.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M26 16a10 10 0 1 1-3-7.1"/><path d="M26 5v5h-5"/><path d="M12 16.5l3 3 5.5-6"/></svg>
+        <h3>Сервіс після встановлення</h3>
+        <p>Допомагаємо підтримувати обладнання у справному стані.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Наші послуги</h2>
+    </div>
+
+    <div class="services">
+      <!-- 1. Кондиціонери -->
+      <article class="svc" id="svc-ac">
+        <div class="svc__name">
+          <svg class="icon-cool" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="8" width="36" height="14" rx="3"/><path d="M9 17.5h26"/><path d="M13 27c0 3-2 3-2 6M22 27c0 3-2 3-2 6M31 27c0 3-2 3-2 6"/></svg>
+          <div>
+            <h3>Кондиціонери</h3>
+            <small>Підбір, продаж, монтаж, сервіс</small>
+          </div>
+        </div>
+        <div class="svc__body">
+          <p>Підберемо кондиціонер відповідно до площі, планування приміщення, необхідної потужності та вашого бюджету.</p>
+          <p class="brands-label">Бренди</p>
+          <!-- TODO: замінити текстові плашки на логотипи брендів (SVG/PNG), коли будуть файли -->
+          <ul class="brands" aria-label="Бренди кондиціонерів">
+            <li>AUX</li><li>GREE</li><li>EWT</li><li>Cooper&amp;Hunter</li><li>Hisense</li><li>Skylux</li><li>Bosch</li><li>Haier</li><li>Mitsubishi Electric</li><li>LG</li><li>Gorenje</li>
+          </ul>
+        </div>
+        <a class="btn btn--ghost" href="#contacts" data-service="Кондиціонер">Підібрати кондиціонер</a>
+      </article>
+
+      <!-- 2. Рекуператори -->
+      <article class="svc" id="svc-erv">
+        <div class="svc__name">
+          <svg class="icon-cool" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="17"/><path d="M8 17h22l-4-4M36 27H14l4 4"/></svg>
+          <div>
+            <h3>Рекуператори</h3>
+            <small>Свіже повітря без зайвих тепловтрат</small>
+          </div>
+        </div>
+        <div class="svc__body">
+          <p>Допоможемо підібрати та встановити систему вентиляції з рекуперацією для комфортного мікроклімату.</p>
+          <p class="brands-label">Бренди</p>
+          <ul class="brands" aria-label="Бренди рекуператорів">
+            <li>PRANA</li><li>BLAUBERG</li><li>VENTOXX</li>
+          </ul>
+        </div>
+        <a class="btn btn--ghost" href="#contacts" data-service="Рекуператор">Підібрати рекуператор</a>
+      </article>
+
+      <!-- 3. Теплові насоси -->
+      <article class="svc" id="svc-hp">
+        <div class="svc__name">
+          <svg class="icon-warm" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="9" width="36" height="26" rx="2"/><circle cx="17" cy="22" r="8"/><path d="M17 14v16M9 22h16M11.3 16.3l11.4 11.4M22.7 16.3 11.3 27.7"/><path d="M31 15v14M35 15v14"/></svg>
+          <div>
+            <h3>Теплові насоси</h3>
+            <small>Опалення та охолодження в одному рішенні</small>
+          </div>
+        </div>
+        <div class="svc__body">
+          <p>Підбір обладнання відповідно до потреб приміщення та його особливостей.</p>
+          <p class="brands-label">Бренди</p>
+          <ul class="brands" aria-label="Бренди теплових насосів">
+            <li>AUX</li><li>Sunrain</li><li>Micoe</li><li>EWT</li>
+          </ul>
+        </div>
+        <a class="btn btn--ghost" href="#contacts" data-service="Тепловий насос">Дізнатися більше</a>
+      </article>
+
+      <!-- 4. Теплові завіси -->
+      <article class="svc" id="svc-curtain">
+        <div class="svc__name">
+          <svg class="icon-warm" viewBox="0 0 44 44" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="6" width="34" height="8" rx="2"/><path d="M10 19v6M16 19v10M22 19v14M28 19v10M34 19v6"/></svg>
+          <div>
+            <h3>Теплові завіси</h3>
+            <small>Ефективний захист від холодного повітря</small>
+          </div>
+        </div>
+        <div class="svc__body">
+          <p>Рішення для магазинів, офісів, комерційних та інших приміщень.</p>
+          <p class="brands-label">Бренди</p>
+          <ul class="brands" aria-label="Бренди теплових завіс">
+            <li>AUX</li><li>Sunrain</li><li>Micoe</li><li>EWT</li>
+          </ul>
+        </div>
+        <a class="btn btn--ghost" href="#contacts" data-service="Теплова завіса">Отримати консультацію</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="sec sec--white" id="included">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Що входить</h2>
+    </div>
+    <ol class="included">
+      <li><span>Консультація</span></li>
+      <li><span>Підбір обладнання</span></li>
+      <li><span>Розрахунок необхідної потужності</span></li>
+      <li><span>Продаж</span></li>
+      <li><span>Монтаж</span></li>
+      <li><span>Запуск</span></li>
+      <li><span>Сервісне обслуговування</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec band" id="process">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Від запиту до комфортного клімату — 4&nbsp;кроки</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <div class="num" aria-hidden="true">1<small>/4</small></div>
+        <h3>Залишаєте заявку</h3>
+        <p>Розповідаєте, яке приміщення потрібно обладнати та що вам потрібно.</p>
+      </li>
+      <li>
+        <div class="num" aria-hidden="true">2<small>/4</small></div>
+        <h3>Підбираємо рішення</h3>
+        <p>Враховуємо площу, особливості приміщення, побажання та бюджет.</p>
+      </li>
+      <li>
+        <div class="num" aria-hidden="true">3<small>/4</small></div>
+        <h3>Встановлюємо</h3>
+        <p>Професійно монтуємо обладнання та запускаємо систему.</p>
+      </li>
+      <li>
+        <div class="num" aria-hidden="true">4<small>/4</small></div>
+        <h3>Забезпечуємо сервіс</h3>
+        <p>За потреби виконуємо подальше обслуговування обладнання.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="sec sec--white" id="audience">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Для кого працюємо</h2>
+    </div>
+    <div class="who">
+    <figure>
+      <img src="img/work-ducts.jpg" alt="Утеплені повітропроводи та вентиляційна установка на комерційному об'єкті під час монтажу" width="960" height="1280" loading="lazy">
+      <figcaption>Монтаж вентиляції на об'єкті</figcaption>
+    </figure>
+    <ul class="audience">
+      <li>
+        <svg viewBox="0 0 46 46" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="10" y="5" width="26" height="37"/><path d="M16 12h4M26 12h4M16 19h4M26 19h4M16 26h4M26 26h4M20 42v-8h6v8"/></svg>
+        <span>Квартири</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 46 46" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 21 23 7l18 14"/><path d="M10 17v24h26V17"/><path d="M19 41V29h8v12"/></svg>
+        <span>Приватні будинки</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 46 46" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="5" y="14" width="36" height="25" rx="2"/><path d="M17 14V9h12v5M5 24h36M21 24v4h4v-4"/></svg>
+        <span>Офіси та бізнес</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 46 46" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 6h32l3 10H4L7 6Z"/><path d="M4 16c0 2.5 2 4 4.6 4s4.6-1.5 4.6-4c0 2.5 2 4 4.6 4s4.6-1.5 4.6-4c0 2.5 2 4 4.6 4s4.6-1.5 4.6-4c0 2.5 2 4 4.6 4S42 18.5 42 16"/><path d="M8 20v21h30V20M14 41V28h8v13M27 28h6v6h-6z"/></svg>
+        <span>Комерційні приміщення</span>
+      </li>
+    </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="sec sec--white" id="contacts">
+  <div class="wrap contact">
+    <div>
+      <h2>Контакти</h2>
+      <a class="contact__tel" href="tel:+380968741892">096 874 18 92</a>
+      <p class="contact__note">Телефон, Viber і Telegram — один номер.</p>
+      <div class="messengers">
+        <a class="btn" href="tel:+380968741892"><svg aria-hidden="true"><use href="#i-phone"/></svg>Подзвонити</a>
+        <a class="btn btn--ghost" href="viber://chat?number=%2B380968741892"><svg aria-hidden="true"><use href="#i-viber"/></svg>Viber</a>
+        <a class="btn btn--ghost" href="https://t.me/+380968741892" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/kostya_horoshko" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</a>
+        <a href="https://www.facebook.com/share/1BpUo2jtDi/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a>
+        <a href="https://www.tiktok.com/@kostya_climaflow" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tiktok"/></svg>TikTok</a>
+      </div>
+    </div>
+
+    <form class="form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <h3>Отримати консультацію</h3>
+      <p>Залиште номер — ми передзвонимо та допоможемо з вибором.</p>
+
+      <!-- TODO: вставити ключ Web3Forms (web3forms.com → Create Access Key на пошту клієнта) -->
+      <input type="hidden" name="access_key" value="">
+      <input type="hidden" name="subject" value="Нова заявка з сайту ClimaFlow">
+      <input type="hidden" name="from_name" value="Сайт ClimaFlow">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+      <label class="field"><span>Ім'я</span>
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label class="field"><span>Телефон</span>
+        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="0__ ___ __ __" required>
+      </label>
+      <label class="field"><span>Що вас цікавить</span>
+        <select name="service" id="serviceSelect">
+          <option value="Кондиціонер">Кондиціонер</option>
+          <option value="Рекуператор">Рекуператор</option>
+          <option value="Тепловий насос">Тепловий насос</option>
+          <option value="Теплова завіса">Теплова завіса</option>
+          <option value="Сервісне обслуговування">Сервісне обслуговування</option>
+          <option value="Інше">Інше</option>
+        </select>
+      </label>
+      <label class="field"><span>Коментар (необов'язково)</span>
+        <textarea name="message" placeholder="Наприклад: квартира 60 м², дві кімнати"></textarea>
+      </label>
+      <button class="btn" type="submit">Надіслати заявку</button>
+      <p class="form__fine">Або телефонуйте: <a href="tel:+380968741892">096 874 18 92</a></p>
+      <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <img src="img/logo-full.png" alt="Clima Flow — клімат під ключ. Продаж, монтаж, сервіс" width="150" height="127" loading="lazy">
+    <div class="footer__meta">
+      <a href="tel:+380968741892">096 874 18 92</a><br>
+      © <span id="year">2026</span> ClimaFlow
+    </div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Швидкий зв'язок">
+  <a href="tel:+380968741892"><svg aria-hidden="true"><use href="#i-phone"/></svg>Подзвонити</a>
+  <a href="viber://chat?number=%2B380968741892"><svg aria-hidden="true"><use href="#i-viber"/></svg>Viber</a>
+  <a href="https://t.me/+380968741892" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-telegram"/></svg>Telegram</a>
+</nav>
+
+<script>
+(function(){
+  // Header border on scroll
+  var header = document.querySelector('.header');
+  var onScroll = function(){ header.classList.toggle('is-scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Mobile menu
+  var burger = document.querySelector('.burger');
+  burger.addEventListener('click', function(){
+    var open = burger.getAttribute('aria-expanded') !== 'true';
+    burger.setAttribute('aria-expanded', open);
+    header.classList.toggle('menu-open', open);
+  });
+  document.querySelectorAll('.nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.setAttribute('aria-expanded', 'false');
+      header.classList.remove('menu-open');
+    });
+  });
+
+  // Hero slash: line follows the photo's clipped left edge (30% at top → 0% at bottom)
+  var hero = document.querySelector('.hero__in');
+  var media = document.querySelector('.hero__media');
+  var svg = document.querySelector('.hero__slash');
+  var line = document.getElementById('slashLine');
+  function placeSlash(){
+    var h = hero.getBoundingClientRect(), m = media.getBoundingClientRect();
+    if (!m.width) return;
+    svg.setAttribute('viewBox', '0 0 ' + h.width + ' ' + h.height);
+    var gap = 22; // separate stroke beside the photo edge, like the slash in the logo
+    var topX = m.left + m.width * 0.30 - h.left - gap, botX = m.left - h.left - gap;
+    var ext = 0.07, dx = botX - topX; // extend slightly past the photo, like the logo stroke
+    line.setAttribute('x1', topX - dx * ext); line.setAttribute('y1', -h.height * ext);
+    line.setAttribute('x2', botX + dx * ext); line.setAttribute('y2', h.height * (1 + ext));
+  }
+  placeSlash(); window.addEventListener('resize', placeSlash);
+
+  // Service buttons preselect the form field
+  var select = document.getElementById('serviceSelect');
+  document.querySelectorAll('[data-service]').forEach(function(btn){
+    btn.addEventListener('click', function(){ select.value = btn.getAttribute('data-service'); });
+  });
+
+  // Form → Web3Forms
+  var form = document.getElementById('leadForm');
+  var status = document.getElementById('formStatus');
+  function show(msg, ok){ status.textContent = msg; status.className = 'form__status ' + (ok ? 'is-ok' : 'is-err'); }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim(), phone = form.phone.value.replace(/[^\d+]/g, '');
+    if (!name) { show("Вкажіть, будь ласка, ваше ім'я.", false); form.name.focus(); return; }
+    if (phone.replace(/\D/g, '').length < 10) { show('Вкажіть номер телефону повністю, наприклад 096 123 45 67.', false); form.phone.focus(); return; }
+    if (!form.access_key.value) { show('Форма ще не підключена. Зателефонуйте нам: 096 874 18 92.', false); return; }
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Надсилаємо…';
+    fetch(form.action, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d.success) { form.reset(); show('Заявку надіслано. Ми передзвонимо вам найближчим часом.', true); }
+        else { show('Заявку не надіслано. Спробуйте ще раз або зателефонуйте: 096 874 18 92.', false); }
+      })
+      .catch(function(){ show("Немає з'єднання. Спробуйте ще раз або зателефонуйте: 096 874 18 92.", false); })
+      .finally(function(){ btn.disabled = false; btn.textContent = 'Надіслати заявку'; });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
