@@ -51,7 +51,7 @@
   --cool-50:#EAF5FD;
   --cool-100:#D4EAFA;
   --cool:#94C8EE;
-  --cool-deep:#1F6FA8;
+  --cool-deep:#1673C8; /* brand blue, matched to the ClimaFlow t-shirt print */
 
   --display:"Unbounded", "Arial Black", system-ui, sans-serif;
   --body:"Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
@@ -171,8 +171,19 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
 .tile--cur{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:32px}
 .tile--cur .tile__main{display:flex;flex-direction:column}
 .tile--cur .btn{align-self:end;margin-top:0}
-.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
-.legend span{display:inline-flex;align-items:center;gap:8px}
+.sec__sub{font-size:17px;font-weight:500;color:var(--muted)}
+.wm-flow{color:var(--cool-deep)}
+
+/* decorative trunking box */
+.box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px, 5vw, 72px);align-items:center}
+.box h2{font-size:clamp(24px, 2.7vw, 34px);line-height:1.2}
+.box h2 span{display:block;color:var(--cool-deep);margin-top:6px}
+.box__text p{color:var(--muted);font-size:17px;margin-top:18px;max-width:34em}
+.box__text p.box__result{color:var(--ink);font-weight:700}
+.box__text .btn{margin-top:30px}
+.box__photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box__photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-md)}
+.box__photos img:last-child{margin-top:48px}
 
 /* included */
 .included-wrap{background:var(--soft);border-radius:var(--r-lg);padding:clamp(28px, 4vw, 56px)}
@@ -258,6 +269,8 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
   .steps{grid-template-columns:repeat(2, minmax(0,1fr));row-gap:40px}
   .steps li:nth-child(2)::after{display:none}
   .contact{grid-template-columns:1fr}
+  .box{grid-template-columns:1fr}
+  .box__photos img:last-child{margin-top:0}
 }
 @media (max-width:640px){
   body{padding-bottom:64px}
@@ -278,6 +291,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
   .tile--cur{grid-template-columns:1fr}
   .tile--cur .btn{margin-top:24px;align-self:start}
   .tile .btn{width:100%}
+  .box__text .btn{width:100%}
   .perks{grid-template-columns:1fr}
   .flow{flex-direction:column;align-items:stretch}
   .flow{gap:28px}
@@ -312,7 +326,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
   <div class="wrap header__in">
     <a class="brand" href="#top" aria-label="ClimaFlow — на початок сторінки">
       <img src="img/logo-mark.png" alt="" width="42" height="43">
-      <b>ClimaFlow</b>
+      <b>Clima<span class="wm-flow">Flow</span></b>
     </a>
     <nav class="nav" id="nav" aria-label="Основна навігація">
       <a href="#services">Послуги</a>
@@ -335,7 +349,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
     <div class="hero__half hero__half--cool" aria-hidden="true"></div>
 
     <img class="hero__mark" src="img/logo-mark.png" alt="" width="104" height="106">
-    <h1>ClimaFlow&nbsp;— кліматичний комфорт під&nbsp;ключ.</h1>
+    <h1>Clima<span class="wm-flow">Flow</span>&nbsp;— кліматичний комфорт під&nbsp;ключ.</h1>
     <p class="hero__lead">Підбір, продаж, професійний монтаж та сервіс кліматичного обладнання — під ключ.</p>
     <ul class="hero__equip" aria-label="Обладнання">
       <li><a href="#svc-ac"><i class="dot dot--cool"></i>Кондиціонери</a></li>
@@ -395,10 +409,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
   <div class="wrap">
     <div class="sec__head">
       <h2>Наші послуги</h2>
-      <div class="legend" aria-hidden="true">
-        <span><i class="dot dot--cool"></i>Охолодження та повітря</span>
-        <span><i class="dot dot--warm"></i>Обігрів</span>
-      </div>
+      <p class="sec__sub">Кондиціонування, опалення та вентиляція</p>
     </div>
 
     <div class="bento">
@@ -439,7 +450,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
             <h3>Теплові насоси</h3>
             <p class="tile__sub">Опалення та охолодження в одному рішенні</p>
           </div>
-          <div class="tile__icon"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="7" width="26" height="18" rx="2.5" stroke="currentColor"/><circle cx="13" cy="16" r="5.5" stroke="#B9503C"/><path d="M13 10.5v11M7.5 16h11" stroke="#1F6FA8"/><path d="M23 11v10M26 11v10" stroke="currentColor"/></svg></div>
+          <div class="tile__icon"><svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="7" width="26" height="18" rx="2.5" stroke="currentColor"/><circle cx="13" cy="16" r="5.5" stroke="#B9503C"/><path d="M13 10.5v11M7.5 16h11" stroke="#1673C8"/><path d="M23 11v10M26 11v10" stroke="currentColor"/></svg></div>
         </div>
         <p class="tile__text">Підбір обладнання відповідно до потреб приміщення та його особливостей.</p>
         <ul class="tile__brands" aria-label="Бренди теплових насосів"><li>AUX</li><li>Sunrain</li><li>Micoe</li><li>EWT</li></ul>
@@ -461,6 +472,22 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
         </div>
         <a class="btn" href="#contacts" data-service="Теплова завіса">Отримати консультацію</a>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="box" style="padding-top:0">
+  <div class="wrap box">
+    <div class="box__text">
+      <h2>Забули прокласти магістраль під кондиціонер ще на етапі ремонту? <span>Не проблема.</span></h2>
+      <p>Щоб труби не псували вигляд фасаду чи інтер’єру, магістраль можна акуратно заховати у спеціальний декоративний короб.</p>
+      <p>Є різні кути, повороти та примикання, тому можемо акуратно обіграти практично будь-яку стіну чи складну ділянку.</p>
+      <p class="box__result">У результаті навіть без заздалегідь закладеної магістралі монтаж виглядає чисто, акуратно та естетично.</p>
+      <a class="btn" href="#contacts" data-service="Кондиціонер">Отримати консультацію</a>
+    </div>
+    <div class="box__photos">
+      <img src="img/work-box-corner.jpg" alt="Магістраль кондиціонера, захована в білий декоративний короб під стелею в куті кімнати" width="660" height="880" loading="lazy">
+      <img src="img/work-box-balcony.jpg" alt="Декоративний короб з поворотом, що закриває магістраль кондиціонера на стіні біля вікна" width="960" height="1280" loading="lazy">
     </div>
   </div>
 </section>
@@ -556,7 +583,7 @@ h3{font-size:clamp(19px, 1.6vw, 22px);font-weight:500;letter-spacing:-.01em}
   <div class="wrap footer__in">
     <div class="footer__brand">
       <img src="img/logo-mark.png" alt="" width="40" height="41" loading="lazy">
-      <span><b>ClimaFlow</b>Клімат під ключ: продаж, монтаж, сервіс</span>
+      <span><b>Clima<span class="wm-flow">Flow</span></b>Клімат під ключ: продаж, монтаж, сервіс</span>
     </div>
     <div><a class="footer__tel" href="tel:+380968741892">096 874 18 92</a>, © <span id="year">2026</span></div>
   </div>
